@@ -1,0 +1,272 @@
+
+*{  
+  background-color: rgb(247, 247, 247);  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --lettertype: "Calibri"
+}
+
+header{
+    border-bottom: solid 2rem #5ea66d;
+    position: sticky;
+    top: 0;
+    margin-bottom: 1.5em;
+    
+    box-shadow: 0px 5px 20px #999;
+    display: flex;
+    justify-content: space-between;
+}
+header img{
+  width: 9rem;
+  height: 8rem;
+  display: block;
+  
+}
+
+nav ul{
+  
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background: transparent;
+}
+
+nav li{
+  list-style: none;
+  padding: 0.5rem;
+  padding-top: 1rem;
+  margin: 0rem;
+  background: transparent;
+}
+a{
+  text-decoration: none;
+  background-color: transparent;
+}
+
+body{
+  max-width: 80em;
+  margin: 0px auto;
+  font-family: var(--lettertype);
+  
+}
+main{
+  
+  padding: 0.5em;
+}
+
+/*Hamburger-cross menu, bronnen:https://github.com/treehouse/ham-menu, https://codepen.io/james2doyle/pen/edNoPe*/
+/*off-screen-menu*/
+.off-screen-menu{
+  height: 2.5rem;
+  width: 15rem;
+  max-width: 450px;
+  position: fixed;
+  right: -450px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: baseline;
+  text-align: left;
+  font-size: 1rem;
+  transition: .3s ease;
+  bottom: auto;
+  top: 0;
+}
+.off-screen-menu.active {
+  right: 5rem;
+  
+}
+
+/* ham menu */
+.ham-menu {
+  height: 3rem;
+  width: 3rem;
+  margin-left: auto;
+  margin-right: 1rem;
+  margin-top: 5rem;
+  position: relative;
+}
+
+.ham-menu span {
+  height: 0.4rem;
+  width: 100%;
+  background-color: #FFC000;
+  border-radius: 1.5rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: .3s ease;
+  
+  
+}
+.ham-menu span:nth-child(1) {
+  top: 25%;
+}
+.ham-menu span:nth-child(3) {
+  top: 75%;
+}
+.ham-menu.active span {
+  background-color: #ED7D31;
+}
+.ham-menu.active span:nth-child(1) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.ham-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+.ham-menu.active span:nth-child(3) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/*grid*/
+main{
+  display: grid;
+  gap: 1.3rem; 
+  grid-template-areas: 
+  'one'
+  'two'
+  'three'
+  'four'
+  'five'
+  ;
+}
+p{
+  background-color: rgb(82, 127, 58);
+  padding: 1.2rem;
+  border: 5px solid #9dc183; 
+  color: rgb(247, 247, 247);
+}
+
+#intro{
+  grid-area: two;
+}
+
+#olijfolie{
+  grid-area: one;
+
+  color: rgb(247, 247, 247);
+  font-size: 1.4rem;
+  background-image: url("img/homeolijfolie.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+ padding-bottom: 0.3rem;
+}
+
+#proces{
+  grid-area: three;
+
+  color: rgb(247, 247, 247);
+  font-size: 1.4rem;
+  background-image: url("img/homeolijfboom.JPG");
+  background-size: cover;
+  background-position: center;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+ padding-bottom: 0.3rem;
+}
+
+#wij{
+  grid-area: four;
+}
+#fincas{
+grid-area: five;
+background-image: url("img/finca.png");    
+background-size: cover;
+background-position: center;
+
+}
+
+
+/*navigatie kleurt als muis erover beweegt*/
+header nav a:hover{
+  text-decoration:underline;
+  text-decoration-color: #FFC000;
+  font-style: italic;
+}
+/*navigatie kleurt welke pagina actief is door class current*/
+.current{
+  background-color: #43c806;
+}
+
+/*p:hover{
+  elke gridbox zijn eigen hover hieronder
+}*/
+
+p a{
+  color: rgb(247, 247, 247);
+}
+#olijfolie:hover{
+  background-image: none;
+}
+
+p#proces:hover{  
+  /*background-image: url("img/homeolijfboom.JPG");
+  background-size: cover;
+  background-position: center;*/
+  background-image: none;
+  background-color: rgb(82, 127, 58);
+}
+
+/* Very small devices (phones, 400px and up) */
+@media (min-width: 400px) { 
+/*grid*/
+main{
+  display: grid;
+  gap: 1.3rem; 
+  grid-template-areas: 
+  'one two'
+  'three two'
+  'four four'
+  'five five';}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media (min-width: 600px) { 
+   /*grid*/
+  main{
+    display: grid;
+    gap: 1.3rem; 
+    grid-template-areas: 
+    'two one'
+    'three one'
+    'four four'
+    'five five'
+    ;
+  }}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 992px) {
+  main{
+    display: grid;
+    gap: 1.3rem; 
+    grid-template-areas: 
+    'one three two'
+    'four four two'
+    ' five five five'
+    
+    ;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1300px and up) */
+@media (min-width: 1300px) {
+  .off-screen-menu.active {
+    right: 22rem;
+
+  }
+}
