@@ -13,18 +13,18 @@
 header{
     border-bottom: solid 2rem #5ea66d;
     position: sticky;
-    top: 0;
-    margin-bottom: 1.5em;
     
     box-shadow: 0px 5px 20px #999;
     display: flex;
-    justify-content: space-between;
+    align-items: baseline;
+    
 }
-header img{
+header img.kleinlogo{
   width: 9rem;
   height: 8rem;
-  display: block;
-  
+}
+.grootlogo{
+  display: none;
 }
 
 nav ul{
@@ -50,7 +50,7 @@ body{
   max-width: 80em;
   margin: 0px auto;
   font-family: var(--lettertype);
-  
+  font-size: 1.4rem;
 }
 main{
   
@@ -136,22 +136,43 @@ main{
   'five'
   ;
 }
-p{
+div{
   background-color: rgb(82, 127, 58);
   padding: 1.2rem;
   border: 5px solid #9dc183; 
   color: rgb(247, 247, 247);
+  
 }
+/*finca's*/
+h1{
+  color: rgb(82, 127, 58);
+  display: flex;
+}
+p{  
+  padding: 1.2rem;
+  display: flex;
+  color: rgb(82, 127, 58);}
+
+  h2 {  
+    color: rgb(82, 127, 58);
+    display: flex;
+  }
+h2 img{
+  height: 25rem;
+}
+/*tot hier*/
 
 #intro{
   grid-area: two;
+  font-style: italic;
+  
 }
 
 #olijfolie{
   grid-area: one;
 
   color: rgb(247, 247, 247);
-  font-size: 1.4rem;
+  font-size: 2rem;
   background-image: url("img/homeolijfolie.jpg");
   background-size: cover;
   background-position: center;
@@ -160,13 +181,16 @@ p{
   flex-direction: column;
   justify-content: flex-end;
  padding-bottom: 0.3rem;
+ min-height: 5em;
+ position: relative;
+ z-index: 0;
 }
 
 #proces{
   grid-area: three;
 
   color: rgb(247, 247, 247);
-  font-size: 1.4rem;
+  font-size: 2rem;
   background-image: url("img/homeolijfboom.JPG");
   background-size: cover;
   background-position: center;
@@ -175,17 +199,29 @@ p{
   flex-direction: column;
   justify-content: flex-end;
  padding-bottom: 0.3rem;
+ min-height: 5em;
 }
 
 #wij{
   grid-area: four;
+
+  color: rgb(247, 247, 247);
+  font-size: 2rem;
+
+  padding-bottom: 0.3rem;
+  min-height: 5em;
 }
 #fincas{
 grid-area: five;
+
+color: rgb(247, 247, 247);
+font-size: 2rem;
 background-image: url("img/finca.png");    
 background-size: cover;
 background-position: center;
 
+padding-bottom: 0.3rem;
+min-height: 8em;
 }
 
 
@@ -204,14 +240,29 @@ header nav a:hover{
   elke gridbox zijn eigen hover hieronder
 }*/
 
-p a{
+div a{
   color: rgb(247, 247, 247);
 }
-#olijfolie:hover{
-  background-image: none;
+#olijfolie::before {
+  content: '';  /* Maak het pseudo-element zichtbaar */
+  position: absolute;  /* Plaats de overlay bovenop de achtergrond + zelfde positie als blok olijfolie  (hieronder; 0000) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 126, 0, 0.3);  
+  opacity: 0;  /* Start met geen zichtbare overlay */
+ 
+  z-index: -1;
 }
 
-p#proces:hover{  
+#olijfolie:hover::before {
+  opacity: 1;  /* Maak de overlay zichtbaar bij hover */
+  transition: opacity 0.4s ease; 
+}
+
+
+div#proces:hover{  
   /*background-image: url("img/homeolijfboom.JPG");
   background-size: cover;
   background-position: center;*/
@@ -219,7 +270,7 @@ p#proces:hover{
   background-color: rgb(82, 127, 58);
 }
 
-/* Very small devices (phones, 400px and up) */
+/* Very small devices (400px and up) */
 @media (min-width: 400px) { 
 /*grid*/
 main{
@@ -229,7 +280,9 @@ main{
   'one two'
   'three two'
   'four four'
-  'five five';}
+  'five five';
+  
+}
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -244,10 +297,30 @@ main{
     'four four'
     'five five'
     ;
-  }}
+  }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media (min-width: 768px) {
+
+}
+
+/* Medium devices (landscape tablets, 700px and up) */
+@media (min-width: 700px) {
+    /*liggend logo*/
+    header img.kleinlogo{
+      display: none;
+    }
+    header img.grootlogo{
+      display: block;
+      width: 32rem;
+    height: 6rem;
+   
+    
+    }
+    header {
+      margin: 0;
+      padding: 0;
+      top: 0;
+  }
+  
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -256,11 +329,11 @@ main{
     display: grid;
     gap: 1.3rem; 
     grid-template-areas: 
-    'one three two'
-    'four four two'
+    'one two three'
+    'four four three'
     ' five five five'
-    
     ;
+    grid-template-columns: 1fr 2fr 2fr;
   }
 }
 /* Extra large devices (large laptops and desktops, 1300px and up) */
