@@ -21,8 +21,8 @@ header{
     
 }
 header img.kleinlogo{
-  width: 9rem;
-  height: 8rem;
+  width: 12rem;
+  height: 10rem;
 }
 .grootlogo{
   display: none;
@@ -69,12 +69,13 @@ main{
   display: flex;
   flex-direction: column;
   align-items: left;
-  justify-content: baseline;
+  justify-content: flex-start;
   text-align: left;
   font-size: 1rem;
   transition: .3s ease;
   bottom: auto;
   top: 0;
+  z-index: 10;
 }
 .off-screen-menu.active {
   right: 5rem;
@@ -89,6 +90,8 @@ main{
   margin-right: 1rem;
   margin-top: 5rem;
   position: relative;
+  cursor: pointer;
+  z-index: 10;
 }
 
 .ham-menu span {
@@ -217,10 +220,21 @@ h2 img{
 
   color: rgb(247, 247, 247);
   font-size: 2rem;
-
+  background-image: url(img/wij.JPG);
+  background-size: cover;
+  background-position: center;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+ padding-bottom: 0.7rem;
   padding-bottom: 0.3rem;
-  min-height: 5em;
+  min-height: 8em;
+  position: relative;
+  z-index: 0;
 }
+
+
 #fincas{
 grid-area: five;
 
@@ -251,7 +265,7 @@ header nav a:hover{
 }*/
 
 
-#olijfolie::before, #proces::before {
+#olijfolie::before, #proces::before, #wij::before {
   content: '';  /* Maak het pseudo-element zichtbaar */
   position: absolute;  /* Plaats de overlay bovenop de achtergrond + zelfde positie als blok olijfolie  (hieronder; 0000) */
   top: 0;
@@ -264,7 +278,7 @@ header nav a:hover{
   z-index: -1;
 }
 
-#olijfolie:hover::before, #proces:hover::before {
+#olijfolie:hover::before, #proces:hover::before, #wij:hover::before {
   opacity: 1;  /* Maak de overlay zichtbaar bij hover */
   transition: opacity 0.4s ease; 
 }
