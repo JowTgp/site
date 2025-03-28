@@ -76,7 +76,7 @@ main{
   transition: .3s ease;
   bottom: auto;
   top: 0;
-  z-index: 1000;
+  z-index: 10;
  
 }
 .off-screen-menu.active {
@@ -93,7 +93,7 @@ main{
   margin-top: 5rem;
   position: relative;
   cursor: pointer;
-  z-index: 1100;
+  z-index: 10;
 }
 
 .ham-menu span {
@@ -227,7 +227,7 @@ h2 img{
   background-position: center;
   text-align: left;
   display: flex;
-  flex-direction: column;
+  flex-direction:column;
   justify-content: flex-end;
  padding-bottom: 0.7rem;
   padding-bottom: 0.3rem;
@@ -242,12 +242,17 @@ grid-area: five;
 
 color: rgb(247, 247, 247);
 font-size: 2rem;
-background-image: url("img/finca.png");    
+background-image: url("img/fincas.JPG");    
 background-size: cover;
 background-position: center;
-
-padding-bottom: 0.3rem;
+text-align: right;
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+padding-bottom: 0.1rem;
 min-height: 8em;
+position: relative;
+z-index: 0;
 }
 
 
@@ -267,7 +272,7 @@ header nav a:hover{
 }*/
 
 
-#olijfolie::before, #proces::before, #wij::before {
+#olijfolie::before, #proces::before, #wij::before, #fincas::before {
   content: '';  /* Maak het pseudo-element zichtbaar */
   position: absolute;  /* Plaats de overlay bovenop de achtergrond + zelfde positie als blok olijfolie  (hieronder; 0000) */
   top: 0;
@@ -280,7 +285,7 @@ header nav a:hover{
   z-index: -1;
 }
 
-#olijfolie:hover::before, #proces:hover::before, #wij:hover::before {
+#olijfolie:hover::before, #proces:hover::before, #wij:hover::before, #fincas:hover::before {
   opacity: 1;  /* Maak de overlay zichtbaar bij hover */
   transition: opacity 0.4s ease; 
 }
