@@ -17,6 +17,7 @@ header{
     box-shadow: 0px 5px 20px #999;
     display: flex;
     align-items: baseline;
+    z-index: 2;
     
 }
 header img.kleinlogo{
@@ -136,13 +137,18 @@ main{
   'five'
   ;
 }
-div{
+
+
+div, a#olijfolie, a#proces, a#fincas, a#wij {
   background-color: rgb(82, 127, 58);
   padding: 1.2rem;
   border: 5px solid #9dc183; 
   color: rgb(247, 247, 247);
-  
-}
+  text-shadow: 4px 3px 3px rgba(0, 0, 0, 0.6); 
+  color: rgb(247, 247, 247);
+} 
+
+
 /*finca's*/
 h1{
   color: rgb(82, 127, 58);
@@ -165,7 +171,8 @@ h2 img{
 #intro{
   grid-area: two;
   font-style: italic;
-  
+  font-size: 1.7rem;
+ 
 }
 
 #olijfolie{
@@ -180,11 +187,12 @@ h2 img{
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
- padding-bottom: 0.3rem;
- min-height: 5em;
+ padding-bottom: 0.7rem;
+ min-height: 8em;
  position: relative;
  z-index: 0;
 }
+
 
 #proces{
   grid-area: three;
@@ -198,8 +206,10 @@ h2 img{
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
- padding-bottom: 0.3rem;
- min-height: 5em;
+ padding-bottom: 0.7rem;
+ min-height: 6em;
+ position: relative;
+ z-index: 0;
 }
 
 #wij{
@@ -240,10 +250,8 @@ header nav a:hover{
   elke gridbox zijn eigen hover hieronder
 }*/
 
-div a{
-  color: rgb(247, 247, 247);
-}
-#olijfolie::before {
+
+#olijfolie::before, #proces::before {
   content: '';  /* Maak het pseudo-element zichtbaar */
   position: absolute;  /* Plaats de overlay bovenop de achtergrond + zelfde positie als blok olijfolie  (hieronder; 0000) */
   top: 0;
@@ -256,22 +264,14 @@ div a{
   z-index: -1;
 }
 
-#olijfolie:hover::before {
+#olijfolie:hover::before, #proces:hover::before {
   opacity: 1;  /* Maak de overlay zichtbaar bij hover */
   transition: opacity 0.4s ease; 
 }
 
 
-div#proces:hover{  
-  /*background-image: url("img/homeolijfboom.JPG");
-  background-size: cover;
-  background-position: center;*/
-  background-image: none;
-  background-color: rgb(82, 127, 58);
-}
-
-/* Very small devices (400px and up) */
-@media (min-width: 400px) { 
+/* Small devices (550px and up) */
+@media (min-width: 550px) { 
 /*grid*/
 main{
   display: grid;
@@ -286,8 +286,8 @@ main{
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media (min-width: 600px) { 
-   /*grid*/
+/*@media (min-width: 600px) { 
+   
   main{
     display: grid;
     gap: 1.3rem; 
@@ -300,11 +300,23 @@ main{
   }
 
 
-}
+}*/
 
 /* Medium devices (landscape tablets, 700px and up) */
 @media (min-width: 700px) {
-    /*liggend logo*/
+  main{
+    display: grid;
+    gap: 1.3rem; 
+    grid-template-areas: 
+    'two one'
+    'three one'
+    'four four'
+    'five five'
+    ;
+  }
+  
+  
+  /*liggend logo*/
     header img.kleinlogo{
       display: none;
     }
