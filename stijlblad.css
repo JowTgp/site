@@ -186,8 +186,8 @@ main.finca{
   gap: 1.3rem;
   grid-template-areas:
   'one'
-  'three'
   'two'
+  'three'
   'four'
   'five'
   'six'
@@ -362,7 +362,7 @@ header nav a:hover{
 }
 /*navigatie kleurt welke pagina actief is door class current*/
 .current{
-  background-color: #43c806;
+  background-color: #5ea66d;
 }
 
 /*p:hover{
