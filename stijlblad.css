@@ -7,7 +7,8 @@
 }
 
 :root{
-  --lettertype: "Calibri"
+  --lettertype: Calibri, 'Carlito', sans-serif;
+  --kleur: rgb(77, 114, 57);
 }
 
 header{
@@ -79,9 +80,9 @@ main{
   z-index: 10;
  
 }
+
 .off-screen-menu.active {
   right: 5rem;
-  
 }
 
 /* ham menu */
@@ -144,8 +145,8 @@ main{
 }
 
 
-div, a#olijfolie, a#proces, a#fincas, a#wij {
-  background-color: rgb(82, 127, 58);
+div#intro, a#olijfolie, a#proces, a#fincas, a#wij {
+  background-color: var(--kleur);
   padding: 1.2rem;
   border: 5px solid #9dc183; 
   color: rgb(247, 247, 247);
@@ -154,24 +155,121 @@ div, a#olijfolie, a#proces, a#fincas, a#wij {
 } 
 
 
-/*finca's*/
+/*finca's grid*/
 h1{
-  color: rgb(82, 127, 58);
-  display: flex;
+  color: var(--kleur);
 }
-p{  
-  padding: 1.2rem;
-  display: flex;
-  color: rgb(82, 127, 58);}
 
-  h2 {  
-    color: rgb(82, 127, 58);
-    display: flex;
-  }
-h2 img{
-  height: 25rem;
+p{
+  color: var(--kleur);
+  max-width: 60ch;
+border-bottom: solid 0.1rem rgb(77, 114, 57);
+padding-bottom: 1rem;
 }
-/*tot hier*/
+p.onderkant{border-bottom: none;}
+div.campillos{
+  color: var(--kleur);
+  max-width: 60ch;
+border-bottom: solid 0.1rem rgb(77, 114, 57);
+padding-bottom: 1rem;
+}
+h2{  
+    color: var(--kleur);
+  }
+
+figure img{
+  height: 22rem;
+}
+main.finca{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.3rem;
+  grid-template-areas:
+  'one'
+  'three'
+  'two'
+  'four'
+  'five'
+  'six'
+  'seven'
+  'eight'
+  'nine'
+  'ten'
+  'eleven'
+  'twelve'
+  'thirteen'
+  'fourteen'
+  'fiveteen'
+  'sixteen'
+  'seventeen'
+  'eightteen'
+  'nineteen'
+  'twenty'
+  ;
+}
+
+h1.uno{
+  grid-area: one;
+}
+h2.uno{
+  grid-area: three;
+}
+p.uno{
+  grid-area: four;
+}
+figure.uno{
+  grid-area: two;
+}
+h1.cementerio{
+  grid-area: five;
+}
+h2.cementerio{
+  grid-area: seven;
+}
+p.cementerio{
+  grid-area: eight;
+}
+figure.cementerio{
+  grid-area: six;
+}
+h1.campillos{
+  grid-area: nine;
+}
+h2.campillos{
+  grid-area: eleven;
+}
+div.campillos{
+  grid-area: twelve;
+}
+figure.campillos{
+  grid-area: ten;
+}
+h1.perogil{
+  grid-area: thirteen;
+}
+h2.perogil{
+  grid-area: fiveteen;
+}
+p.perogil{
+  grid-area: sixteen;
+}
+figure.perogil{
+  grid-area: fourteen;
+}
+h1.caseta{
+  grid-area: seventeen;
+}
+h2.caseta{
+  grid-area: nineteen;
+}
+p.caseta{
+  grid-area: twenty;
+}
+figure.caseta{
+  grid-area: eightteen;
+}
+
+/*finca grid tot hier*/
 
 #intro{
   grid-area: two;
@@ -335,8 +433,7 @@ main{
     'five five'
     ;
   }
-  
-  
+
   /*liggend logo*/
     header img.kleinlogo{
       display: none;
@@ -368,11 +465,35 @@ main{
     ;
     grid-template-columns: 1fr 2fr 2fr;
   }
+  main.finca{
+    display: grid;
+    gap: 1.3rem; 
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    'one five'
+    'two six'
+    'three seven'
+    'four eight'
+    'nine thirteen'
+    'ten fourteen'
+    'eleven fiveteen'
+    'twelve sixteen'
+    'seventeen seventeen'
+    'eightteen eightteen'
+    'nineteen nineteen'
+    'twenty twenty'
+    ;
+  }
 }
+
 /* Extra large devices (large laptops and desktops, 1300px and up) */
 @media (min-width: 1300px) {
   .off-screen-menu.active {
-    right: 22rem;
+    right: 18rem;
 
   }
+figure img{
+  height: 25rem;
+}
+
 }
