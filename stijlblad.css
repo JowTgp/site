@@ -22,9 +22,9 @@ header{
     z-index: 2;
     
 }
-header img.kleinlogo{
-  width: 12rem;
-  height: 10rem;
+header img.kleinlogo, header img.grootlogo{
+  max-width: 100%;
+  height: auto;
 }
 .grootlogo{
   display: none;
@@ -178,7 +178,9 @@ h2{
   }
 
 figure img{
-  height: 22rem;
+  max-height: 22rem;
+  
+  
 }
 main.finca{
   display: grid;
