@@ -50,7 +50,7 @@ a{
 }
 
 body{
-  max-width: 80em;
+  /*max-width: 80em;*/
   margin: 0px auto;
   font-family: var(--lettertype);
   font-size: 1.4rem;
