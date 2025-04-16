@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: 1px solid lime;
+  /*outline: 1px solid lime;*/
   
 }
 
@@ -67,7 +67,7 @@ main{
 
 h1{
   font-family: var(--titels);
-  
+  margin-top: 1rem;
 }
 figcaption{
   font-size: 1.1rem;
@@ -366,6 +366,21 @@ figure.caseta{
 
 /*finca grid tot hier*/
 /*grid wie we zijn*/
+main.wiewezijn{
+  display: grid;
+  grid-template-areas:
+  'one'
+  'two'
+  'three'
+  'four'
+  'five'
+  'six'
+  'seven'
+  'eight'
+  
+  ;
+}
+
 h1.titel{
   grid-area: one;
 }
@@ -375,17 +390,33 @@ p#inleiding{
 figure#fotowij{
   grid-area: three;
 }
-p.spanje{
+p#spanje{
   grid-area: four;
+}
+p#huis{
+  grid-area: five;
+}
+figure#fotohuis{
+  grid-area: six;
+}
+p#dorp{
+  grid-area: seven;
+}
+p#start{
+  grid-area: eight;
 }
 
 figure#fotowij{
-  max-height: 30rem;
-  max-width: 39rem;
+  max-height: 32rem;
+  max-width: 42rem;
   outline: 1px solid red;
   margin-bottom: 1.4rem;
 }
-
+figure#fotohuis{
+  max-height: 57rem;
+  max-width: 42rem;
+  outline: 1px solid red;
+}
 
 /*grid wie we zijn tot hier*/
 
@@ -531,7 +562,24 @@ p, div.campillos {
   p, div.campillos {
     max-width: 70ch;
   }
- 
+ main.wiewezijn{
+  display: grid;
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+  'one three'
+  'two three'
+  'four three'
+  'six five'
+  'six seven' 
+  'six eight';
+ }
+
+p#inleiding, p#spanje, p#huis, p#dorp, p#start{
+  max-width: 60ch; /*of 70? checken met tekst mama
+}
+
 }
 
 /* Extra large devices (large laptops and desktops, 1300px and up) */
