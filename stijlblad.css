@@ -4,13 +4,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: 1px solid red;
-  outline: 1px dashed lime;
+  outline: 1px solid lime;
+  
 }
 
 :root{
   --lettertype: Calibri, 'Carlito', sans-serif;
   --kleur: rgb(77, 114, 57);
+  --titels: Times, "Noto", Georgia, serif;
 }
 
 header{
@@ -34,7 +35,6 @@ header img.kleinlogo, header img.grootlogo{
 }
 
 nav ul{
-  
   flex-wrap: wrap;
   justify-content: space-around;
   background: transparent;
@@ -58,13 +58,20 @@ body{
   margin: 0px auto;
   font-family: var(--lettertype);
   font-size: 1.4rem;
-  
+  color: var(--kleur);
 }
 main{
   
   padding: 0.5em;
 }
 
+h1{
+  font-family: var(--titels);
+  
+}
+figcaption{
+  font-size: 1.1rem;
+}
 /*Hamburger-cross menu, bronnen:https://github.com/treehouse/ham-menu, https://codepen.io/james2doyle/pen/edNoPe*/
 /*off-screen-menu*/
 .off-screen-menu{
@@ -159,21 +166,98 @@ div#intro, a#olijfolie, a#proces, a#fincas, a#wij {
   color: rgb(247, 247, 247);
 } 
 
-
-/*finca's grid*/
-h1{
-  color: var(--kleur);
+#intro{
+  grid-area: two;
+  font-style: italic;
+  font-size: 1.7rem;
+ 
 }
 
+#olijfolie{
+  grid-area: one;
+
+  color: rgb(247, 247, 247);
+  font-size: 2rem;
+  background-image: url("img/homeolijfolie.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+ padding-bottom: 0.7rem;
+ min-height: 8em;
+ position: relative;
+ z-index: 0;
+}
+
+
+#proces{
+  grid-area: three;
+
+  color: rgb(247, 247, 247);
+  font-size: 2rem;
+  background-image: url("img/homeolijfboom.JPG");
+  background-size: cover;
+  background-position: center;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+ padding-bottom: 0.7rem;
+ min-height: 6em;
+ position: relative;
+ z-index: 0;
+}
+
+#wij{
+  grid-area: four;
+
+  color: rgb(247, 247, 247);
+  font-size: 2rem;
+  background-image: url(img/wij.JPG);
+  background-size: cover;
+  background-position: center;
+  text-align: left;
+  display: flex;
+  flex-direction:column;
+  justify-content: flex-end;
+ padding-bottom: 0.7rem;
+  padding-bottom: 0.3rem;
+  min-height: 8em;
+  position: relative;
+  z-index: 0;
+}
+
+
+#fincas{
+grid-area: five;
+
+color: rgb(247, 247, 247);
+font-size: 2rem;
+background-image: url("img/fincas.JPG");    
+background-size: cover;
+background-position: center;
+text-align: right;
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+padding-bottom: 0.1rem;
+min-height: 8em;
+position: relative;
+z-index: 0;
+}
+
+
+/*finca's grid*/
+
 p{
-  color: var(--kleur);
   max-width: 35ch;
 border-bottom: solid 0.1rem rgb(77, 114, 57);
 padding-bottom: 1rem;
 }
 p.onderkant{border-bottom: none;}
 div.campillos{
-  color: var(--kleur);
   max-width: 35ch;
 border-bottom: solid 0.1rem rgb(77, 114, 57);
 padding-bottom: 1rem;
@@ -281,88 +365,30 @@ figure.caseta{
 }
 
 /*finca grid tot hier*/
-
-#intro{
-  grid-area: two;
-  font-style: italic;
-  font-size: 1.7rem;
- 
-}
-
-#olijfolie{
+/*grid wie we zijn*/
+h1.titel{
   grid-area: one;
-
-  color: rgb(247, 247, 247);
-  font-size: 2rem;
-  background-image: url("img/homeolijfolie.jpg");
-  background-size: cover;
-  background-position: center;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
- padding-bottom: 0.7rem;
- min-height: 8em;
- position: relative;
- z-index: 0;
 }
-
-
-#proces{
+p#inleiding{
+  grid-area: two;
+}
+figure#fotowij{
   grid-area: three;
-
-  color: rgb(247, 247, 247);
-  font-size: 2rem;
-  background-image: url("img/homeolijfboom.JPG");
-  background-size: cover;
-  background-position: center;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
- padding-bottom: 0.7rem;
- min-height: 6em;
- position: relative;
- z-index: 0;
 }
-
-#wij{
+p.spanje{
   grid-area: four;
+}
 
-  color: rgb(247, 247, 247);
-  font-size: 2rem;
-  background-image: url(img/wij.JPG);
-  background-size: cover;
-  background-position: center;
-  text-align: left;
-  display: flex;
-  flex-direction:column;
-  justify-content: flex-end;
- padding-bottom: 0.7rem;
-  padding-bottom: 0.3rem;
-  min-height: 8em;
-  position: relative;
-  z-index: 0;
+figure#fotowij{
+  max-height: 30rem;
+  max-width: 39rem;
+  outline: 1px solid red;
+  margin-bottom: 1.4rem;
 }
 
 
-#fincas{
-grid-area: five;
+/*grid wie we zijn tot hier*/
 
-color: rgb(247, 247, 247);
-font-size: 2rem;
-background-image: url("img/fincas.JPG");    
-background-size: cover;
-background-position: center;
-text-align: right;
-display: flex;
-flex-direction: column;
-justify-content: flex-end;
-padding-bottom: 0.1rem;
-min-height: 8em;
-position: relative;
-z-index: 0;
-}
 
 
 /*navigatie kleurt als muis erover beweegt*/
