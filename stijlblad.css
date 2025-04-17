@@ -54,24 +54,26 @@ a{
 
 body{
   /*max-width: 80em;*/
-  max-width: 100vw;
-  margin: 0px auto;
+  max-width: 100%; /*of 100vw?*/
+  margin: 0px;
   font-family: var(--lettertype);
   font-size: 1.4rem;
   color: var(--kleur);
 }
 main{
-  
-  padding: 0.5em;
+  padding: 0.8em;
 }
-
 h1{
   font-family: var(--titels);
   margin-top: 1rem;
 }
 figcaption{
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
+figure{
+  margin-bottom: 1em;
+}
+
 /*Hamburger-cross menu, bronnen:https://github.com/treehouse/ham-menu, https://codepen.io/james2doyle/pen/edNoPe*/
 /*off-screen-menu*/
 .off-screen-menu{
@@ -143,8 +145,8 @@ figcaption{
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-/*grid*/
-main{
+/*grid home*/
+main#home{
   display: grid;
   gap: 1.3rem; 
   grid-template-areas: 
@@ -163,7 +165,7 @@ div#intro, a#olijfolie, a#proces, a#fincas, a#wij {
   border: 5px solid #9dc183; 
   color: rgb(247, 247, 247);
   text-shadow: 4px 3px 3px rgba(0, 0, 0, 0.6); 
-  color: rgb(247, 247, 247);
+  
 } 
 
 #intro{
@@ -197,15 +199,15 @@ div#intro, a#olijfolie, a#proces, a#fincas, a#wij {
 
   color: rgb(247, 247, 247);
   font-size: 2rem;
-  background-image: url("img/homeolijfboom.JPG");
+  background-image: url("img/proces.jpg");
   background-size: cover;
   background-position: center;
-  text-align: left;
+  text-align: right;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  flex-direction:column;
+  justify-content:end;
  padding-bottom: 0.7rem;
- min-height: 6em;
+ min-height: 8em;
  position: relative;
  z-index: 0;
 }
@@ -254,13 +256,13 @@ z-index: 0;
 p{
   max-width: 35ch;
 border-bottom: solid 0.1rem rgb(77, 114, 57);
-padding-bottom: 1rem;
+margin-bottom: 1rem;
 }
 p.onderkant{border-bottom: none;}
 div.campillos{
   max-width: 35ch;
 border-bottom: solid 0.1rem rgb(77, 114, 57);
-padding-bottom: 1rem;
+margin-bottom: 1rem;
 }
 h2{  
     color: var(--kleur);
@@ -275,7 +277,7 @@ img {
   height: auto;
 }
 
-main.finca{
+main#finca{
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.3rem;
@@ -294,7 +296,7 @@ main.finca{
   'twelve'
   'thirteen'
   'fourteen'
-  'fiveteen'
+  'fifteen'
   'sixteen'
   'seventeen'
   'eightteen'
@@ -343,7 +345,7 @@ h1.perogil{
   grid-area: thirteen;
 }
 h2.perogil{
-  grid-area: fiveteen;
+  grid-area: fifteen;
 }
 p.perogil{
   grid-area: sixteen;
@@ -365,8 +367,8 @@ figure.caseta{
 }
 
 /*finca grid tot hier*/
-/*grid wie we zijn*/
-main.wiewezijn{
+/*grid wie we zijn
+main#wiewezijn{
   display: grid;
   grid-template-areas:
   'one'
@@ -381,7 +383,7 @@ main.wiewezijn{
   ;
 }
 
-h1.titel{
+h1#titel{
   grid-area: one;
 }
 p#inleiding{
@@ -406,6 +408,7 @@ p#start{
   grid-area: eight;
 }
 
+
 figure#fotowij{
   max-height: 32rem;
   max-width: 42rem;
@@ -418,7 +421,7 @@ figure#fotohuis{
   outline: 1px solid red;
 }
 
-/*grid wie we zijn tot hier*/
+grid wie we zijn tot hier*/
 
 
 
@@ -460,7 +463,7 @@ header nav a:hover{
 /* Small devices (550px and up) */
 @media (min-width: 550px) { 
 /*grid*/
-main{
+main#home{
   display: grid;
   gap: 1.3rem; 
   grid-template-areas: 
@@ -478,7 +481,7 @@ p, div.campillos {
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /*@media (min-width: 600px) { 
    
-  main{
+  main#home{
     display: grid;
     gap: 1.3rem; 
     grid-template-areas: 
@@ -494,7 +497,7 @@ p, div.campillos {
 
 /* Medium devices (landscape tablets, 700px and up) */
 @media (min-width: 700px) {
-  main{
+  main#home{
     display: grid;
     gap: 1.3rem; 
     grid-template-areas: 
@@ -514,7 +517,6 @@ p, div.campillos {
       width: 32rem;
     height: 6rem;
    
-    
     }
     header {
       margin: 0;
@@ -529,20 +531,27 @@ p, div.campillos {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media (min-width: 992px) {
-  main{
+  body{font-size: 1.8rem;}
+  
+  main#home{
     display: grid;
     gap: 1.3rem; 
     grid-template-areas: 
     'one two three'
     'four four three'
-    ' five five five'
+    'five five five'
     ;
     grid-template-columns: 1fr 2fr 2fr;
+    grid-template-rows: 1fr 1fr 2fr;
+ 
   }
-  main.finca{
+ 
+
+  main#finca{
     display: grid;
     gap: 1.3rem; 
     grid-template-columns: 1fr 1fr;
+    grid-auto-rows: min-content;
     grid-template-areas:
     'one five'
     'two six'
@@ -550,37 +559,66 @@ p, div.campillos {
     'four eight'
     'nine thirteen'
     'ten fourteen'
-    'eleven fiveteen'
+    'eleven fifteen'
     'twelve sixteen'
     'seventeen seventeen'
     'eightteen eightteen'
     'nineteen nineteen'
     'twenty twenty'
     ;
+   
     
   }
+  
   p, div.campillos {
     max-width: 70ch;
   }
- main.wiewezijn{
+
+ /*main#wiewezijn{
+ 
   display: grid;
   margin-left: 0.8rem;
   margin-right: 0.8rem;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
-  'one three'
+ 'one three'
   'two three'
   'four three'
   'six five'
   'six seven' 
   'six eight';
  }
+  p#inleiding{margin-top: 2rem;}
+  figure#fotowij{margin-top: 2rem;}
+
 
 p#inleiding, p#spanje, p#huis, p#dorp, p#start{
-  max-width: 60ch; /*of 70? checken met tekst mama
+  max-width: 60ch; }/*of 70? checken met tekst mama*/
+
+  main article{
+    column-count: 2;
+    column-width: auto;
+    column-gap:30px;
+    column-rule: 3px dotted var(--kleur);  /*weg of aanpassen?*/
+}
+main article picture,{
+    max-width:100%;
+}
 }
 
-}
+/*h1#titel,
+p#inleiding,
+figure#fotowij,
+p#spanje,
+p#huis,
+figure#fotohuis,
+p#dorp,
+p#start{place-self: start stretch;
+  outline: 1px solid red;}*/
+
+
+
+
 
 /* Extra large devices (large laptops and desktops, 1300px and up) */
 @media (min-width: 1300px) {
@@ -588,6 +626,9 @@ p#inleiding, p#spanje, p#huis, p#dorp, p#start{
     right: 18rem;
 
   }
+  main#home > a, main#home > div{
+    font-size: 2.2rem;
 
+  }
 
 }
