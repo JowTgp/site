@@ -55,7 +55,7 @@ a{
 body{
   /*max-width: 80em;*/
   max-width: 100%; /*of 100vw?*/
-  margin: 0px;
+  margin: 0px auto;
   font-family: var(--lettertype);
   font-size: 1.4rem;
   color: var(--kleur);
@@ -158,21 +158,19 @@ main#home{
   ;
 }
 
-
 div#intro, a#olijfolie, a#proces, a#fincas, a#wij {
   background-color: var(--kleur);
   padding: 1.2rem;
   border: 5px solid #9dc183; 
   color: rgb(247, 247, 247);
   text-shadow: 4px 3px 3px rgba(0, 0, 0, 0.6); 
-  
 } 
 
 #intro{
   grid-area: two;
+  
   font-style: italic;
   font-size: 1.7rem;
- 
 }
 
 #olijfolie{
@@ -189,7 +187,7 @@ div#intro, a#olijfolie, a#proces, a#fincas, a#wij {
   justify-content: flex-end;
  padding-bottom: 0.7rem;
  min-height: 8em;
- position: relative;
+ position: relative; /* in verband met groene achtergrond bij hover anders hele achtergrond groen, nu enkel deze blok gekleurd bij hover*/
  z-index: 0;
 }
 
