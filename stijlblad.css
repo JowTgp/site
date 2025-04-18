@@ -264,6 +264,7 @@ p.uno, p.cementerio,div.campillos,p.perogil, p.caseta{
   max-width: 35ch;
 border-bottom: solid 0.1rem rgb(77, 114, 57);
 margin-bottom: 1rem;
+padding-bottom: 1rem;
 }
 /*p.onderkant{border-bottom: none;}
 div.campillos{
@@ -312,6 +313,11 @@ main#finca{
   'eightteen'
   'nineteen'
   'twenty'
+  'twentytwenty'
+  'twenty-one'
+  'twenty-two'
+  'twenty-three'
+  
   ;
 }
 
@@ -375,6 +381,23 @@ p.caseta{
 figure.caseta{
   grid-area: eightteen;
 }
+div#blok2{grid-area: twentytwenty;}
+div#lasplanas{
+  grid-area: twenty-one;
+}
+div#maestrazgo{
+  grid-area: twenty-two;
+}
+figure#santolea{grid-area: twenty-three;}
+
+/*h1#blok2{
+  grid-area: twenty-one;
+}
+p#streek{grid-area: twenty-two;}
+h2#planas{grid-area: 23;}
+p#gehucht{grid-area: 24;}
+figure#dorpplein{grid-area:25;}
+p#marcos{grid-area: 26;}*/
 
 /*finca grid tot hier*/
 /*grid wie we zijn
@@ -575,6 +598,9 @@ p.uno, p.cementerio,div.campillos,p.perogil, p.caseta, p.onderkant, p{
     'eightteen eightteen'
     'nineteen nineteen'
     'twenty twenty'
+    'twentytwenty twentytwenty'
+    'twenty-one twenty-two'
+    'twenty-three twenty-three'
     ;
    
     
