@@ -28,9 +28,6 @@ header{
     
 }
 
-header {
-  border: 2px solid lime;
-}
 header img.kleinlogo, header img.grootlogo{
   max-width: 100%;
   height: auto;
