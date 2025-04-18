@@ -18,6 +18,7 @@ header{
     /*border-bottom: solid 2rem #5ea66d;*/
     border-bottom: solid 2rem rgb(82, 127, 58);
     position: sticky;
+    margin-bottom: 1.5rem;
     top: 0;
     width: 100%;
     box-shadow: 0px 5px 20px #999;
@@ -65,7 +66,7 @@ main{
 }
 h1{
   font-family: var(--titels);
-  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 figcaption{
   font-size: 1.2rem;
@@ -517,11 +518,7 @@ p, div.campillos {
     height: 6rem;
    
     }
-    header {
-      margin: 0;
-      padding: 0;
-      top: 0;
-  }
+   
   p, div.campillos {
     max-width: 70ch;
   }
@@ -530,8 +527,10 @@ p, div.campillos {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media (min-width: 992px) {
-  body{font-size: 1.8rem;}
-  
+  body{font-size: 1.5em;}
+  h1, h2{font-size: 1.4em;}
+  h2{font-size: 1.3em;}
+
   main#home{
     display: grid;
     gap: 1.3rem; 
@@ -627,7 +626,11 @@ p#start{place-self: start stretch;
   }
   main#home > a, main#home > div{
     font-size: 2.2rem;
-
+    
   }
-
+  main article{
+    column-count: 3;
+    column-width: auto;
+    column-gap:30px;
+    column-rule: 3px dotted var(--kleur);
 }
