@@ -279,7 +279,13 @@ h2{
   max-height: 22rem;
   
 }*/
-img, iframe{
+img{
+  max-width: 100%;
+  height: auto;
+}
+iframe{
+  width: 600px:
+  height: 450px;
   max-width: 100%;
   height: auto;
 }
