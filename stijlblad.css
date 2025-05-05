@@ -386,94 +386,25 @@ div#maestrazgo{
   grid-area: twenty-two;
 }
 figure#santolea{grid-area: twenty-three;}
-
-/*h1#blok2{
-  grid-area: twenty-one;
-}
-p#streek{grid-area: twenty-two;}
-h2#planas{grid-area: 23;}
-p#gehucht{grid-area: 24;}
-figure#dorpplein{grid-area:25;}
-p#marcos{grid-area: 26;}*/
-
-/*finca grid tot hier*/
-/*grid wie we zijn
-main#wiewezijn{
-  display: grid;
-  grid-template-areas:
-  'one'
-  'two'
-  'three'
-  'four'
-  'five'
-  'six'
-  'seven'
-  'eight'
-  
-  ;
-}
-
-h1#titel{
-  grid-area: one;
-}
-p#inleiding{
-  grid-area: two;
-}
-figure#fotowij{
-  grid-area: three;
-}
-p#spanje{
-  grid-area: four;
-}
-p#huis{
-  grid-area: five;
-}
-figure#fotohuis{
-  grid-area: six;
-}
-p#dorp{
-  grid-area: seven;
-}
-p#start{
-  grid-area: eight;
-}
+/* einde finca grid*/
 
 
-figure#fotowij{
-  max-height: 32rem;
-  max-width: 42rem;
-  outline: 1px solid red;
-  margin-bottom: 1.4rem;
-}
-figure#fotohuis{
-  max-height: 57rem;
-  max-width: 42rem;
-  outline: 1px solid red;
-}
-
-grid wie we zijn tot hier*/
-
-
-
-/*navigatie kleurt als muis erover beweegt*/
+/*navigatie als muis erover beweegt*/
 header nav a:hover{
   text-decoration:underline;
   text-decoration-color: #FFC000;
   font-style: italic;
 }
-/*navigatie kleurt welke pagina actief is door class current*/
+/*navigatie kleurt welke pagina actief is met class current*/
 .current{
   background-color: #5ea66d;
 }
 
-/*p:hover{
-  elke gridbox zijn eigen hover hieronder
-}*/
-
+/*elke gridbox zijn eigen hover doorzichtig groen overlay hieronder*/
 
 #olijfolie::before, #proces::before, #wij::before, #fincas::before {
-  content: '';  /* Maak het pseudo-element zichtbaar */
-  position: absolute;  /* Plaats de overlay bovenop de achtergrond + zelfde positie als blok olijfolie  (hieronder; 0000) */
+  content: '';  /* Maakt het pseudo-element zichtbaar */
+  position: absolute;  /* Plaatst de overlay bovenop de achtergrond + zelfde positie als blok olijfolie  (hieronder; 0000) */
   top: 0;
   left: 0;
   right: 0;
@@ -607,49 +538,17 @@ p.uno, p.cementerio,div.campillos,p.perogil, p.caseta, p.onderkant, p{
     max-width: 70ch;
   }
 
- /*main#wiewezijn{
- 
-  display: grid;
-  margin-left: 0.8rem;
-  margin-right: 0.8rem;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
- 'one three'
-  'two three'
-  'four three'
-  'six five'
-  'six seven' 
-  'six eight';
- }
-  p#inleiding{margin-top: 2rem;}
-  figure#fotowij{margin-top: 2rem;}
-
-
-p#inleiding, p#spanje, p#huis, p#dorp, p#start{
-  max-width: 60ch; }/*of 70? checken met tekst mama*/
 
   main article{
     column-count: 2;
     column-width: auto;
     column-gap:30px;
-    column-rule: 3px dotted var(--kleur);  /*weg of aanpassen?*/
+    column-rule: 3px dotted var(--kleur);  /*nog weg of aanpassen?*/
 }
 main article picture,{
     max-width:100%;
 }
 }
-
-/*h1#titel,
-p#inleiding,
-figure#fotowij,
-p#spanje,
-p#huis,
-figure#fotohuis,
-p#dorp,
-p#start{place-self: start stretch;
-  outline: 1px solid red;}*/
-
-
 
 
 
@@ -668,4 +567,5 @@ p#start{place-self: start stretch;
     column-width: auto;
     column-gap:30px;
     column-rule: 3px dotted var(--kleur);
+}
 }
