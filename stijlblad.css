@@ -76,6 +76,10 @@ img{
 iframe{
   max-width: 100%;
 }
+a{
+  text-decoration: none;
+  background-color: transparent;
+}
 
 article#deel1{
     border-bottom: dotted 3px var(--kleur);
@@ -87,6 +91,88 @@ div.onderlijn{
   border-bottom: solid 0.1rem var(--kleur);
   margin-bottom: 1.2rem;
  
+}
+
+/*grid home*/
+main#home{
+  display: grid;
+  gap: 1.3rem; 
+  grid-template-areas: 
+  'one'
+  'two'
+  'three'
+  'four'
+  'five'
+  ;
+}
+div#intro, a#olijfolie, a#proces, a#fincas, a#wij {
+  background-color: var(--kleur);
+  padding: 1.2rem;
+  border: 5px solid rgb(157, 193, 131); 
+  color: rgb(247, 247, 247);
+  text-shadow: 4px 3px 3px rgba(0, 0, 0, 0.6); 
+} 
+div#intro > p{
+background-color: var(--kleur);
+}
+
+#intro{
+  grid-area: one;
+  font-size: 1.5rem;
+}
+
+#olijfolie{
+  grid-area: two;
+
+  color: rgb(247, 247, 247);
+  font-size: 2rem;
+  background-image: url("img/homeolijfolie.jpg");
+  text-align: left;
+  flex-direction: column;
+  padding-bottom: 0.7rem;
+}
+
+#proces{
+  grid-area: three;
+
+  color: rgb(247, 247, 247);
+  font-size: 2rem;
+  background-image: url("img/proces1.jpg");
+  text-align: right;
+  flex-direction:row;
+ padding-bottom: 0.7rem;
+}
+
+#wij{
+  grid-area: four;
+
+  color: rgb(247, 247, 247);
+  font-size: 2rem;
+  background-image: url(img/wij.JPG);
+  text-align: left;
+  flex-direction:column;
+ padding-bottom: 0.7rem;
+}
+
+#fincas{
+grid-area: five;
+
+color: rgb(247, 247, 247);
+font-size: 2rem;
+background-image: url("img/fincas1.jpg");    
+text-align: right;
+flex-direction: column;
+padding-bottom: 0.1rem;
+}
+
+#olijfolie, #proces, #fincas, #wij{
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: flex-end;
+  min-height: 8em;
+position: relative;/* voor groene achtergrond bij hover anders hele achtergrond groen, nu enkel deze blok gekleurd bij hover*//* voor groene achtergrond bij hover anders hele achtergrond groen, nu enkel deze blok gekleurd bij hover*/
+z-index: 0;
 }
 
 /*grid wij en de omgeving tweede deel*/
