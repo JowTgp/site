@@ -80,6 +80,10 @@ a{
   text-decoration: none;
   background-color: transparent;
 }
+nav li{
+  list-style: none;
+   background: transparent;
+}
 
 article#deel1{
     border-bottom: dotted 3px var(--kleur);
@@ -116,7 +120,7 @@ div#intro{
   background-color: rgb(247, 247, 247);
 border: none;
 text-shadow: none;
-padding: none;
+padding: 0px;
 }
 
 div#intro > p{
