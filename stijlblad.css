@@ -114,7 +114,7 @@ div#intro, a#olijfolie, a#proces, a#fincas, a#wij {
 } 
 div#intro > p{
 background-color: var(--kleur);
-font-size: 1.3rem;
+font-size: 1.2rem;
 }
 
 #intro{
@@ -223,6 +223,9 @@ div#caseta{grid-area: five;}
   'two three'
   'four four'
   'five five';
+}
+div#intro > p{
+font-size: 1.3rem;
 }
 }
 
