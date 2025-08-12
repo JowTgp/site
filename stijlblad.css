@@ -121,6 +121,7 @@ div#intro{
 border: none;
 text-shadow: none;
 padding: 0px;
+gap: 0px;
 }
 
 div#intro > p{
