@@ -53,10 +53,10 @@ main{
   max-width: 80em;
 }
 h1{
-margin-bottom: 1.1rem;
+margin-bottom: 1rem;
   font-size: 2rem;
 }
-h2{  
+h2{  margin-bottom: 1.1rem;
     font-size: 1.5rem;
   }
 figcaption{
@@ -83,8 +83,13 @@ article#deel1{
     padding-bottom: 0.8em;
 }
 
-/*grid wij en de omgeving tweede deel*/
+div.onderlijn{
+  border-bottom: solid 0.1rem var(--kleur);
+  margin-bottom: 1.2rem;
+ 
+}
 
+/*grid wij en de omgeving tweede deel*/
 div#deel2{
 display: grid;
   grid-template-columns: 1fr;
@@ -99,6 +104,25 @@ div#inleiding{grid-area: one;}
 div#maestrazgo{grid-area: two;}
 div#lasplanas{grid-area: three;}
 figure#santolea{grid-area: four;}
+
+
+/*Grid Finca's*/
+main#finca{
+  display: grid;
+ /* grid-template-columns: 1fr;*/
+  gap: 1.3rem;
+  grid-template-areas:
+  'one'
+  'two'
+  'three'
+  'four'
+  'five';
+}
+div#fincauno{grid-area: one;}
+div#cementerio{grid-area: two;}
+div#loscampillos{grid-area: three;}
+div#perogil{grid-area: four;}
+div#caseta{grid-area: five;}
 
 
 /*RWD*/
@@ -147,6 +171,15 @@ display: grid;
   'two three'
   'four four';
 }
+/*Grid finca's*/
+main#finca{
+    display: grid;
+    gap: 1.3rem; 
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    'one two'
+    'three four'
+    'five five'
 }
 
 /* Extra large devices (large laptops and desktops, 1300px and up) */
