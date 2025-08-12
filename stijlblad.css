@@ -112,9 +112,17 @@ div#intro, a#olijfolie, a#proces, a#fincas, a#wij {
   color: rgb(247, 247, 247);
   text-shadow: 4px 3px 3px rgba(0, 0, 0, 0.6); 
 } 
+div#intro{
+  background-color: rgb(247, 247, 247);
+border: none;
+text-shadow: none;
+padding: none;
+}
+
 div#intro > p{
-background-color: var(--kleur);
+/*background-color: var(--kleur);*/
 font-size: 1.2rem;
+color: var(--kleur);
 }
 
 #intro{
@@ -337,11 +345,11 @@ main#finca{
     display: grid;
     gap: 1.3rem; 
     grid-template-areas: 
-    'two one three'
+    'one two three'
     'four four three'
     'five five five';
     grid-template-rows: 1fr 0.6fr 1.2fr;
-    grid-template-columns: 0.8fr 1.8fr 1fr;
+    grid-template-columns: 1.8fr 0.8fr 1fr;
 }
 /*#fincas{text-align: left;
   flex-direction:column;
