@@ -35,10 +35,10 @@ header img.kleinlogo, header img.grootlogo{
 /* menu flex*/
 ul.menu{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 1rem;
-  justify-content: space-evenly;
-  align-items: baseline;
+  justify-content: space-between;
+  /*align-items: flex-start;*/
  padding: 1rem;
 }
 nav ul{
@@ -53,9 +53,8 @@ nav li a{
 font-size: 1.2rem;
 }
 
-img#logo{
-  margin-top: 1rem;
-  border-bottom: 2px solid red;
+div#logo{
+  padding-top: 1.2rem;
 }
 
 /* menu flex einde*/
@@ -266,6 +265,37 @@ div#caseta{grid-area: five;}
 }
 /*einde groene hover*/
 
+/*nav lijntjes*/
+header nav a::after{
+  content: '';
+  width: 0%;
+  height: 2.5px;
+  background: #FFC000;
+  display: block;
+ /*margin: auto;*/
+  transition: 0.1s;
+  margin-top: 2px;
+}
+nav ul a:hover::after{
+  width: 100%;
+}
+nav ul a:active::after{
+  background: rgb(237, 125, 49);
+}
+
+/*einde nav lijntjes*/
+/*alt
+header nav a:hover{
+  text-decoration:underline;
+  text-decoration-color: #FFC000;
+  padding: 0.5px;
+  margin-top: 10px;
+}
+
+
+alt*/
+
+
 /*RWD*/
 /* Small devices (550px and up) */
 @media (min-width: 550px) { 
@@ -287,7 +317,19 @@ font-size: 1.3rem;
 /* Medium devices (landscape tablets, 700px and up) */
 @media (min-width: 700px) {
 
-
+ul.menu{
+  flex-direction: row;
+  justify-content: flex-start;
+    }
+/*liggend logo*/
+    header img.kleinlogo{
+      display: none;
+    }
+    header img.grootlogo{
+      display: block;
+      width: 32rem;
+    height: 6rem;
+    }
 
     main#home{
   display: grid;
@@ -307,19 +349,6 @@ font-size: 1.3rem;
     h1{font-size: 2.4rem;}
     h2{font-size: 1.6rem;}  
     
-    ul.menu{
-  flex-direction: row;
-    }
-
-      /*liggend logo*/
-    header img.kleinlogo{
-      display: none;
-    }
-    header img.grootlogo{
-      display: block;
-      width: 32rem;
-    height: 6rem;
-    }
 
 main#home{
   grid-template-rows: 1fr 1.5fr 1fr 1.4fr;
