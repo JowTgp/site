@@ -80,10 +80,21 @@ a{
   text-decoration: none;
   background-color: transparent;
 }
+/* menu flex*/
+ul{
+  display: flex;
+  flex-direction: column;
+}
 nav li{
   list-style: none;
    background: transparent;
+   
 }
+nav li a{
+  color: --var(kleur);
+font-size: 0.8em;
+}
+/* menu flex*/
 
 article#deel1{
     border-bottom: dotted 3px var(--kleur);
@@ -184,7 +195,7 @@ padding-bottom: 0.1rem;
   display: flex;
   justify-content: flex-end;
   min-height: 8em;
-position: relative;/* voor groene achtergrond bij hover anders hele achtergrond groen, nu enkel deze blok gekleurd bij hover*//* voor groene achtergrond bij hover anders hele achtergrond groen, nu enkel deze blok gekleurd bij hover*/
+position: relative;/* voor groene achtergrond bij hover anders hele achtergrond groen, nu enkel deze blok gekleurd bij hover*/
 z-index: 0;
 }
 
@@ -224,6 +235,26 @@ div#perogil{grid-area: four;}
 div#caseta{grid-area: five;}
 
 
+/*Homepage elke gridbox zijn eigen hover doorzichtig groen overlay hieronder*/
+
+#olijfolie::before, #proces::before, #wij::before, #fincas::before {
+  content: '';  /* Maakt het pseudo-element zichtbaar */
+  position: absolute;  /* Plaatst de overlay bovenop de achtergrond + zelfde positie als blok olijfolie  (hieronder; 0000) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 126, 0, 0.3);  
+  opacity: 0;  /* Start met geen zichtbare overlay */
+  z-index: -1;
+}
+
+#olijfolie:hover::before, #proces:hover::before, #wij:hover::before, #fincas:hover::before {
+  opacity: 1;  /* Maak de overlay zichtbaar bij hover */
+  transition: opacity 0.4s ease; 
+}
+/*einde groene hover*/
+
 /*RWD*/
 /* Small devices (550px and up) */
 @media (min-width: 550px) { 
@@ -241,8 +272,6 @@ div#intro > p{
 font-size: 1.3rem;
 }
 }
-
-
 
 /* Medium devices (landscape tablets, 700px and up) */
 @media (min-width: 700px) {
@@ -267,12 +296,11 @@ font-size: 1.3rem;
   'five five';
   grid-template-rows: 1fr 2fr 1fr 1.2fr;
 }
-
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media (min-width: 992px) {
-    body{font-size: 1.5rem;}
+    /*body{font-size: 1.5rem;}*/
     h1{font-size: 2.4rem;}
     h2{font-size: 1.6rem;}  
     
