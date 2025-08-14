@@ -73,7 +73,6 @@ body{
   color: var(--kleur);
 }
 main{
-
   padding: 1em;
   max-width: 80em;
 }
@@ -283,7 +282,6 @@ nav ul li:hover::after{
 }
 nav ul li:active::after{
   background: rgb(237, 125, 49);
-  transition: none 2s;
 }
 
 /*einde nav lijntjes*/
@@ -412,7 +410,7 @@ main#finca{
     'five five five'
     /*'five five five'*/
     ;
-    grid-template-rows: 0.8fr 0.8fr 1.2fr;
+    grid-template-rows: 0.8fr 0.8fr 1.1fr;
     grid-template-columns: 1fr 1fr 1fr;
 
     /*grid-template-columns: 1fr 2fr 2fr;
