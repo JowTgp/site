@@ -80,7 +80,7 @@ h1{
 margin-bottom: 1rem;
   font-size: 2rem;
 }
-h2{/*margin-bottom: 1.1rem;*/
+h2{margin-bottom: 1.1rem;
     font-size: 1.5rem;
   }
 figcaption{
@@ -285,7 +285,8 @@ div#feb-maart{
     /*grid-template-columns: 0.5fr 8fr;*/
 
 }
-figure#pijl1{grid-area: nul;}
+figure#pijl1{grid-area: nul;
+}
 figure#pijl1lig{grid-area: one;}
 h2#febru-maart{grid-area: two;}
 p#snoei{grid-area: three;}
@@ -460,6 +461,12 @@ div#feb-maart{
   'two'
   'three'
   'four';
+}
+div.kolom{
+    column-count: 2;
+    column-width: auto;
+    column-gap:30px;
+}
 
 }
 
