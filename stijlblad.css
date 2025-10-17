@@ -108,7 +108,13 @@ a{
 footer{
   background-color: rgb(82, 127, 58);
   color:rgb(247, 247, 247);
-  font-size: 0.8rem;
+  font-size: 1rem;
+      border-bottom: solid 1.2rem rgb(247, 247, 247);
+      
+      padding: 0.5rem 0;
+      padding-left: 1.2rem;
+      margin-top: 1rem;
+
 }
 
 article#deel1{
@@ -367,11 +373,22 @@ li.current::after{
   /*border-bottom: 2.5px solid #FFC000;
   bottom: -0.5px;*/
 }
+ 
 
 /*RWD*/
 /* Small devices (550px and up) */
 @media (min-width: 550px) { 
 
+  /*liggend logo*/
+    header img.kleinlogo{
+      display: none;
+    }
+    header img.grootlogo{
+      display: block;
+      width: 32rem;
+    height: 6rem;
+    }
+    
   main#home{
   display: grid;
   gap: 1.3rem; 
@@ -393,15 +410,7 @@ ul.menu{
   flex-direction: row;
   justify-content: flex-start;
     }
-/*liggend logo*/
-    header img.kleinlogo{
-      display: none;
-    }
-    header img.grootlogo{
-      display: block;
-      width: 32rem;
-    height: 6rem;
-    }
+
 
     main#home{
   display: grid;
@@ -505,6 +514,12 @@ div.kolom{
  
   }
 
+     main, nav, ul{
+    max-width: 1300px;
+    margin: 0 auto;
+  } 
+  
+
   main article{
     column-count: 3;
     column-width: auto;
@@ -525,6 +540,8 @@ div.kolom{
     grid-template-rows: 1fr 0.6fr 1.2fr;
     grid-template-columns: 1.8fr 0.8fr 1fr;
 }
+ 
+
 /*#fincas{text-align: left;
   flex-direction:column;
 padding-left: 5rem;}*/
