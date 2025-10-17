@@ -22,10 +22,12 @@ header{
     top: 0;
     width: 100vw;
     box-shadow: 0px 5px 20px #999;
-    /*display: flex;*/
+    
    /* align-items: baseline;*/
     z-index: 2;
+    display: flex; /*flexbox maken om navigatie en klein logo naast elkaar te krijgen*/
 }
+
 header img.kleinlogo, header img.grootlogo{
   /*max-width: 100%;
   height: auto;*/
@@ -373,7 +375,76 @@ li.current::after{
   /*border-bottom: 2.5px solid #FFC000;
   bottom: -0.5px;*/
 }
- 
+ /*Ham-cross menu, bronnen: https://github.com/treehouse/ham-menu, https://codepen.io/james2doyle/pen/edNoPe*/
+
+.hammenu{
+  height: 3rem;
+  width: 3rem;
+  margin-left: auto;
+  margin-right: 1rem;
+  margin-top: auto; /*zodat naar onder in header zakt naast klein logo */
+  position: relative;
+  cursor: pointer;
+  z-index: 10;
+  
+}
+.hammenu span{
+  height: 0.4rem;
+  width: 100%;
+  background-color: #FFC000;
+  border-radius: 1.5rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: .3s ease;
+}
+.hammenu span:nth-child(1) {
+  top: 25%;
+} /* streep omhoog*/
+
+.hammenu span:nth-child(3) {
+  top: 75%;
+}
+.hammenu.active span {
+  background-color: rgb(237, 125, 49);
+}
+.hammenu.active span:nth-child(1) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.hammenu.active span:nth-child(2) {
+  opacity: 0;
+}
+.hammenu.active span:nth-child(3) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+ul.menu{
+  display: none;
+}
+/*.menugroot{
+ height: 2.5rem;
+  width: 15rem;
+  max-width: 450px;
+  position: fixed;
+  right: -450px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: flex-start;
+  text-align: left;
+  font-size: 1rem;
+  transition: .3s ease;
+  bottom: auto;
+  top: 0;
+  z-index: 10;
+}
+.menugroot.active {
+  right: 5rem;
+}*/
+
 
 /*RWD*/
 /* Small devices (550px and up) */
@@ -410,6 +481,8 @@ ul.menu{
   flex-direction: row;
   justify-content: flex-start;
     }
+
+  
 
 
     main#home{
