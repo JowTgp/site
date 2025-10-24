@@ -453,7 +453,7 @@ nav.zijmenu{
 }
 .zijmenu.active {
  /* transform: translateX(0); */
- right: 4.5rem;
+ right: 20%;
 }
 
 /* nav.zijmenu > ul{ */
@@ -485,7 +485,7 @@ nav.zijmenu > ul > li{
     height: 6rem;
     }
    .zijmenu.active {
-  right: 2.5rem;
+  right: 5%;
   top: 8rem;
 } 
     
