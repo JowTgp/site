@@ -82,6 +82,7 @@ body{
   font-family: var(--lettertype);
   font-size: 1.4rem;
   color: var(--kleur);
+  overflow-x: hidden; /*zodat zijmenu niet zichtbaar kan worden als niet actief , bijvoorbeeld als scherm GSM roteren staand-liggend*/
 }
 main{
   padding: 1em;
