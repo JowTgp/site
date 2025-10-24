@@ -436,7 +436,7 @@ ul.menu{
 nav.zijmenu{
  
   width: 13rem;
-  max-width: 13rem;
+  max-width: 450px;
   position: absolute; /*om in header te blijven staan, ook bij scrollen*/
   /* transform: translateX(110vw); */
   right: -100%;
