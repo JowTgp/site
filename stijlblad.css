@@ -9,6 +9,7 @@
 :root{
   --lettertype: 'Carlito', Calibri, sans-serif;
   --kleur: rgb(61, 90, 45);
+  --achtergrondkleur: rgb(247, 247, 247);
  
   /* --kleur: rgb(77, 114, 57); tekst donkerder maken*/
  
@@ -25,11 +26,12 @@ header{
     
    /* align-items: baseline;*/
     z-index: 2;
-     /*flexbox maken om navigatie en klein logo naast elkaar te krijgen*/ 
+    display: flex;
+     /*flexbox maken om navigatie en klein logo naast elkaar te krijgen, bij mediaquery terug block maken vanaf ham menu weg*/ 
 }
-div.container{
+/*div.container{
   display: flex;
-}
+}*/
 
 header img.kleinlogo, header img.grootlogo{
   /*max-width: 100%;
@@ -378,7 +380,7 @@ li.current::after{
   /*border-bottom: 2.5px solid #FFC000;
   bottom: -0.5px;*/
 }
- /*Ham-cross menu, bronnen: https://github.com/treehouse/ham-menu, https://codepen.io/james2doyle/pen/edNoPe*/
+ /*Ham-cross menu, bronnen: https://github.com/treehouse/ham-menu en https://codepen.io/james2doyle/pen/edNoPe*/
 
 .hammenu{
   height: 3rem;
@@ -427,10 +429,10 @@ li.current::after{
 ul.menu{
   display: none;
 }
-/*.menugroot{
- height: 2.5rem;
-  width: 15rem;
-  max-width: 450px;
+nav.zijmenu{
+ 
+  width: 13rem;
+  max-width: 13rem;
   position: fixed;
   right: -450px;
   display: flex;
@@ -438,20 +440,35 @@ ul.menu{
   align-items: left;
   justify-content: flex-start;
   text-align: left;
-  font-size: 1rem;
   transition: .3s ease;
   bottom: auto;
-  top: 0;
+  top: 1rem;
   z-index: 10;
+      border: 5px solid rgb(157, 193, 131);
+
 }
-.menugroot.active {
-  right: 5rem;
-}*/
+.zijmenu.active {
+  right: 4.5rem;
+  
+}
+/* nav.zijmenu > ul{ */
+    /* border: 5px solid rgb(157, 193, 131); */
+  /* margin: 0.5rem; */
+  /* background-color: var(--achtergrondkleur); */
+ /*Als Height van nav.zijmenu gedefineerd, deze terug activeren voor juiste opmaak }*/
+
+nav.zijmenu > ul > li{
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-left: 0.7rem;
+  margin-right: 0.7rem;
+  
+}
 
 
 /*RWD*/
-/* Small devices (550px and up) */
-@media (min-width: 550px) { 
+/* Small devices (565px and up) */
+@media (min-width: 565px) { 
 
   /*liggend logo*/
     header img.kleinlogo{
@@ -462,6 +479,10 @@ ul.menu{
       width: 32rem;
     height: 6rem;
     }
+    .zijmenu.active {
+  right: 4rem;
+  top: 8rem;
+}
     
   main#home{
   display: grid;
@@ -479,7 +500,9 @@ font-size: 1.3rem;
 
 /* Medium devices (landscape tablets, 700px and up) */
 @media (min-width: 700px) {
-
+header{
+  display: block;
+}
   .hammenu{
     display: none;
   }
@@ -490,6 +513,9 @@ font-size: 1.3rem;
   justify-content: space-between;
   /*align-items: flex-start;*/
  padding: 1rem;
+}
+nav.zijmenu{
+  display: none;
 }
 /*ul.menu{
   flex-direction: row;
@@ -625,7 +651,8 @@ margin: 0 auto;/*centraal centreren*/
 
 /* Very very large devices (large laptops and desktops, 1550px and up) */
 @media (min-width: 1550px) {
-    main#home{
+   
+  /*main#home{
     display: grid;
     gap: 1.3rem; 
     grid-template-areas: 
@@ -635,7 +662,7 @@ margin: 0 auto;/*centraal centreren*/
     grid-template-rows: 1fr 0.6fr 1.2fr;
     grid-template-columns: 1.8fr 0.8fr 1.2fr;
 }
- /*laatste opdeling RWD weglaten? als max width in orde is?*/
+ laatste opdeling RWD weglaten als max width in orde is*/
 
 /*#fincas{text-align: left;
   flex-direction:column;
