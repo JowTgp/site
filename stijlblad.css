@@ -74,7 +74,7 @@ div#logo{
   display: none;
 }
 
-/* html{overflow-x: hidden;} */
+/* html{overflow-x: hidden;} weglaten als op body hieronder werkt */
 body{
   max-width: 80em;
   max-width: 100%; /*of 100%*/
