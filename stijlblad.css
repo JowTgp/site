@@ -55,6 +55,8 @@ nav ul{
    
 }
 ul.menu li{
+    margin-left: 1rem;
+   margin-right: 1rem;
 }
 
 nav li a{
@@ -434,8 +436,9 @@ nav.zijmenu{
  
   width: 13rem;
   max-width: 13rem;
-  position: absolute;
-  right: -450px;
+  position: absolute; /*om in header te blijven staan, ook bij scrollen*/
+  /* transform: translateX(110vw); */
+  right: -100%;
   display: flex;
   flex-direction: column;
   align-items: left;
@@ -449,7 +452,8 @@ nav.zijmenu{
 
 }
 .zijmenu.active {
-  right: 4.5rem;
+ /* transform: translateX(0); */
+ right: 4.5rem
 }
 
 /* nav.zijmenu > ul{ */
