@@ -28,6 +28,7 @@ header{
     z-index: 2;
     display: flex;
      /*flexbox maken om navigatie en klein logo naast elkaar te krijgen, bij mediaquery terug block maken vanaf ham menu weg*/ 
+     position: relative; /* Om zijmenu absoluut te positioneren tov header ipv volledige pagina, anders beweegt zijmenu mee bij scrollen */
 }
 /*div.container{
   display: flex;
@@ -433,7 +434,7 @@ nav.zijmenu{
  
   width: 13rem;
   max-width: 13rem;
-  position: fixed;
+  position: absolute;
   right: -450px;
   display: flex;
   flex-direction: column;
