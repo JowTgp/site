@@ -484,10 +484,10 @@ nav.zijmenu > ul > li{
       width: 32rem;
     height: 6rem;
     }
-    .zijmenu.active {
+    /* .zijmenu.active {
   right: 2.5rem;
   top: 8rem;
-}
+} */
     
   main#home{
   display: grid;
