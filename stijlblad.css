@@ -454,7 +454,8 @@ nav.zijmenu{
 }
 .zijmenu.active {
   transform: translateX(100%);
- 
+   top: 8rem;
+
 }
 
 /* nav.zijmenu > ul{ */
