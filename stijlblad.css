@@ -449,12 +449,12 @@ nav.zijmenu{
   bottom: auto;
   top: 1rem;
   z-index: 11;
-      border: 5px solid rgb(157, 193, 131);
+  border: 5px solid rgb(157, 193, 131);
 
 }
 .zijmenu.active {
- /* transform: translateX(0); */
- right: 20%;
+  transform: translateX(100%);
+ 
 }
 
 /* nav.zijmenu > ul{ */
@@ -486,7 +486,7 @@ nav.zijmenu > ul > li{
     height: 6rem;
     }
    .zijmenu.active {
-  right: 5%;
+  transform: translateX(170%);
   top: 8rem;
 } 
     
