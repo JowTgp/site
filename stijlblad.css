@@ -74,7 +74,7 @@ div#logo{
   display: none;
 }
 
-html{overflow-x: hidden;} /*weglaten als op body hieronder werkt */
+html{overflow-x: hidden;} /*niet weglaten - beide moeten voor menu*/
 body{
   max-width: 80em;
   max-width: 100%; /*of 100%*/
@@ -82,7 +82,7 @@ body{
   font-family: var(--lettertype);
   font-size: 1.4rem;
   color: var(--kleur);
- overflow-x: hidden; /* zodat zijmenu niet zichtbaar kan worden als niet actief , bijvoorbeeld als scherm GSM roteren staand-liggend*/
+ overflow-x: hidden; /* zodat zijmenu niet zichtbaar kan worden als niet actief , bijvoorbeeld als scherm GSM roteren staand-liggend - zowel htlm als body moeten getarged worden anders werkt het niet*/
 }
 main{
   padding: 1em;
