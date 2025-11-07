@@ -352,12 +352,10 @@ figure#fotogroeneolijf{grid-area: four;}
 
 div#okt{ display: grid;
     column-gap: 1rem;
-    
     grid-template-areas:
   'nul two'
   'nul three'
   'nul four';
-  align-items:normal;
 }
 
 figure#pijl4{grid-area: nul;
@@ -366,6 +364,49 @@ figure#pijl4lig{grid-area: one;}
 h2#okto{grid-area: two;}
 p#opleggen{grid-area: three;}
 figure#fotoopleggen{grid-area: four;}
+
+/* div#nov-dec{ display: grid;
+    column-gap: 1rem;
+    grid-template-areas:
+  'nul two'
+  'nul three'
+  'nul four'
+  'nul five'
+  'nul six'
+  'nul seven'
+  'nul eight'
+  'nul';
+
+}
+
+figure#pijl5{grid-area: nul;
+align-self: center;}
+figure#pijl5lig{grid-area: one;}
+h2#novem-decem{grid-area: two;}
+p#oogsten{grid-area: three;}
+figure#fotooogsten{grid-area: four;}
+p#snel{grid-area: five;}
+figure#fotosnel{grid-area: six;}
+p#molen{grid-area: seven;}
+p#geperst{grid-area: eight;} */
+
+div#nov-dec{ display: grid;
+    column-gap: 1rem;
+    grid-template-areas:
+    'nul two'
+    'nul three'
+    'five four'
+  }
+figure#pijl5{grid-area: nul;
+align-self: center;}
+figure#pijl5lig{grid-area: one;}
+figure#pijl6{grid-area: five;
+align-self: center;}
+h2#novem-decem{grid-area: two;}
+div#oogsten{grid-area: three;}
+div#persen{grid-area: four;}
+
+
 
 /*Homepage elke gridbox zijn eigen hover doorzichtig groene overlay hieronder*/
 
