@@ -97,6 +97,7 @@ h2{margin-bottom: 1.1rem;
   }
 figcaption{
   font-size: 1.2rem;
+  /* margin-bottom: 0.3rem; */
 }
 p.bronvermelding{font-size: 0.9rem;}
 
@@ -279,19 +280,26 @@ main#productieproces{
   'one'
   'two'
   'three'
-  /* 'four'
+  'four'
   'five'
-  'six'
-  'seven'*/;} 
+  'six';} 
 
   div#voorste{grid-area: one;}
   div#feb-maart{grid-area: two;}
   div#apr-juni{grid-area: three;}
+  div#juli-sept{grid-area: four;}
+  div#okt{grid-area: five;}
+  div#nov-dec{grid-area: six;}
 
-  figure.afmeting{
+  /* figure.afmeting{
     max-height: 25rem;
     max-width: 30rem;
-  }
+  } */
+  /* figure#ondertekst{padding: 1.8rem;} */
+  img.afmeting{
+    max-height: 25rem;
+    max-width: 30rem;
+}  /* max op img want als max op figure, werken paddging en margin niet meer omdat de img over de max van figure komen */ 
 
 /*GRid per tijdslijnblok*/
 div#feb-maart{
@@ -598,10 +606,13 @@ figure.tijdslijnliggend img{
 /* Grid Productieproces */
 main#productieproces{
     display: grid;
+    column-gap: 0.8rem;
      grid-template-columns: 1fr 1fr;
     grid-template-areas:
   'one one'
   'two three'
+  'four five'
+  'six six'
   ;
   align-items: start; /*bij alle grid blokken inhoud naar boven, anders veel witruimte tussen tekst en fotos*/
 }
