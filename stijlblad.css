@@ -305,14 +305,16 @@ main#productieproces{
 div#feb-maart{
    display: grid;
     column-gap: 1rem;
-    
+  
     grid-template-areas:
   'nul two'
   'nul three'
   'nul four';
 }
 
-figure#pijl1{grid-area: nul;}
+figure#pijl1{grid-area: nul;
+   align-self: center;
+}
 figure#pijl1lig{grid-area: one;}
 h2#febru-maart{grid-area: two;}
 p#snoei{grid-area: three;}
@@ -326,7 +328,8 @@ div#apr-juni{
   'nul three'
   'nul four';
 }
-figure#pijl2{grid-area: nul;}
+figure#pijl2{grid-area: nul;
+align-self: center;}
 figure#ppijl2lig{grid-area: one;}
 h2#april-mei-juni{grid-area: two;}
 p#bemesting{grid-area: three;}
@@ -340,7 +343,8 @@ div#juli-sept{
   'nul three'
   'nul four';
 }
-figure#pijl3{grid-area: nul;}
+figure#pijl3{grid-area: nul;
+align-self: center;}
 figure#ppijl3lig{grid-area: one;}
 h2#jul-sept{grid-area: two;}
 p#groeneolijf{grid-area: three;}
