@@ -291,10 +291,10 @@ main#productieproces{
   div#okt{grid-area: five;}
   div#nov-dec{grid-area: six;}
 
-  /* figure.afmeting{
+figure.afmeting{
     max-height: 25rem;
-    max-width: 30rem;
-  } */
+    max-width: 30rem;}
+
   /* figure#ondertekst{padding: 1.8rem;} */
   img.afmeting{
     max-height: 25rem;
