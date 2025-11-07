@@ -284,6 +284,7 @@ main#productieproces{
   'five'
   'six';} 
 
+
   div#voorste{grid-area: one;}
   div#feb-maart{grid-area: two;}
   div#apr-juni{grid-area: three;}
@@ -291,15 +292,14 @@ main#productieproces{
   div#okt{grid-area: five;}
   div#nov-dec{grid-area: six;}
 
-figure.afmeting{
-    max-height: 25rem;
-    max-width: 30rem;}
+/* figure.afmeting{
+    max-height: 100%; /*25rem; */
+   /*  max-width: 30rem;} */
 
   /* figure#ondertekst{padding: 1.8rem;} */
-  img.afmeting{
-    max-height: 25rem;
-    max-width: 30rem;
-}  /* max op img want als max op figure, werken paddging en margin niet meer omdat de img over de max van figure komen */ 
+ /*  img.afmeting{
+    max-height: 100%; /*25rem; */
+     /*max-width: 30rem; } */ /* max op img want als max op figure, werken paddging en margin niet meer omdat de img over de max van figure komen */ 
 
 /*GRid per tijdslijnblok*/
 div#feb-maart{
@@ -310,11 +310,8 @@ div#feb-maart{
   'nul two'
   'nul three'
   'nul four';
-
-    /*grid-template-rows: 3fr 1fr 1fr 1fr;*/
-    /*grid-template-columns: 0.5fr 8fr;*/
-
 }
+
 figure#pijl1{grid-area: nul;}
 figure#pijl1lig{grid-area: one;}
 h2#febru-maart{grid-area: two;}
@@ -642,6 +639,15 @@ div#feb-maart{
 }
 div#apr-juni{
   display: grid;
+column-gap: 1rem;
+grid-template-areas:
+'one'
+'two'
+'three'
+'four';
+}
+div#juli-sept{
+    display: grid;
 column-gap: 1rem;
 grid-template-areas:
 'one'
