@@ -310,9 +310,7 @@ div#feb-maart{
   'nul four';
 }
 
-figure#pijl1{grid-area: nul;
-  grid-row: 1/-1;
-}
+figure#pijl1{grid-area: nul;}
 figure#pijl1lig{grid-area: one;}
 h2#febru-maart{grid-area: two;}
 p#snoei{grid-area: three;}
@@ -322,8 +320,8 @@ figure.tijdslijn img{
   height: 100%;
   width: auto;
    object-fit: fill;
+   
 }
-
 
 div#apr-juni{
    display: grid;
@@ -333,8 +331,7 @@ div#apr-juni{
   'nul three'
   'nul four';
 }
-figure#pijl2{grid-area: nul;
-align-self: center;}
+figure#pijl2{grid-area: nul;}
 figure#ppijl2lig{grid-area: one;}
 h2#april-mei-juni{grid-area: two;}
 p#bemesting{grid-area: three;}
