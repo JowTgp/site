@@ -30,9 +30,7 @@ header{
      /*flexbox maken om navigatie en klein logo naast elkaar te krijgen, bij mediaquery terug block maken vanaf ham menu weg*/ 
      position: relative; /* Om zijmenu absoluut te positioneren tov header ipv volledige pagina, anders beweegt zijmenu mee bij scrollen */
 }
-/*div.container{
-  display: flex;
-}*/
+
 
 header img.kleinlogo, header img.grootlogo{
   /*max-width: 100%;
@@ -400,13 +398,17 @@ div#nov-dec{ display: grid;
 figure#pijl5{grid-area: nul;
 align-self: center;}
 figure#pijl5lig{grid-area: one;}
-figure#pijl6{grid-area: five;
+/* figure#pijl6{grid-area: five;
 align-self: center;}
-figure#pijl6lig{grid-area: six;}
+figure#pijl6lig{grid-area: six;} */
 h2#novem-decem{grid-area: two;}
 div#oogsten{grid-area: three;}
 div#persen{grid-area: four;}
 
+ #extrafoto{
+    display: none;
+    margin-left: 1rem;
+  }
 
 
 /*Homepage elke gridbox zijn eigen hover doorzichtig groene overlay hieronder*/
@@ -450,14 +452,8 @@ nav ul li:active::after{
 }
 
 /*einde nav lijntjes*/
-/*alt?
-header nav a:hover{
-  text-decoration:underline;
-  text-decoration-color: #FFC000;
-  padding: 0.5px;
-  margin-top: 10px;
-}
-alt*/
+
+
 /*navigatie kleurt welke pagina actief is met class current*/
 li.current::after{
   content: '';
@@ -710,7 +706,7 @@ grid-template-areas:
 'four';
 }
 div#juli-sept{
-    display: grid;
+display: grid;
 column-gap: 1rem;
 grid-template-areas:
 'one'
@@ -720,7 +716,7 @@ grid-template-areas:
 }
 
 div#okt{
-      display: grid;
+display: grid;
 column-gap: 1rem;
 grid-template-areas:
 'one'
@@ -730,13 +726,16 @@ grid-template-areas:
 }
 
 div#nov-dec{ display: grid;
-    column-gap: 1rem;
+    /* column-gap: 1rem; */
     grid-template-areas:
-  'one six'
+  'one one'
   'two two'
-  'three four'
-  
+  'three three'
+  'four four'
   ;
+  }
+  #extrafoto{
+    display: block;
   }
 
 /* div.kolom{
