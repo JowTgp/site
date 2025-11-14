@@ -311,12 +311,19 @@ div#feb-maart{
 }
 
 figure#pijl1{grid-area: nul;
-   align-self: center;
+  grid-row: 1/-1;
 }
 figure#pijl1lig{grid-area: one;}
 h2#febru-maart{grid-area: two;}
 p#snoei{grid-area: three;}
 figure#fotosnoei{grid-area: four;}
+
+figure.tijdslijn img{
+  height: 100%;
+  width: auto;
+   object-fit: fill;
+}
+
 
 div#apr-juni{
    display: grid;
