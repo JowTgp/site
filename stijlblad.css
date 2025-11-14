@@ -397,22 +397,18 @@ div#nov-dec{ display: grid;
     grid-template-areas:
     'nul two'
     'nul three'
-    'five four'
+    'nul four'
   }
-figure#pijl5{grid-area: nul;
-align-self: center;}
+figure#pijl5{grid-area: nul;}
 figure#pijl5lig{grid-area: one;}
-/* figure#pijl6{grid-area: five;
-align-self: center;}
-figure#pijl6lig{grid-area: six;} */
 h2#novem-decem{grid-area: two;}
 div#oogsten{grid-area: three;}
 div#persen{grid-area: four;}
 
- #extrafoto{
+  #extrafoto{
     display: none;
-    margin-left: 1rem;
-  }
+   
+  } 
 
 
 /*Homepage elke gridbox zijn eigen hover doorzichtig groene overlay hieronder*/
@@ -734,13 +730,13 @@ div#nov-dec{ display: grid;
     grid-template-areas:
   'one one'
   'two two'
-  'three three'
-  'four four'
+  'three four'
+  /* 'four four' */
   ;
   }
-  #extrafoto{
-    display: block;
-  }
+  /* #extrafoto{
+    display: inline-block;
+  }  */
 
 /* div.kolom{
     column-count: 2;
