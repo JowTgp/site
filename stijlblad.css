@@ -309,13 +309,13 @@ div#nov-dec {
 /*GRid per tijdslijnblok*/
 div#feb-maart{
    display: grid;
-    column-gap: 1rem;
-  outline: 1px solid red;
+  column-gap: 0.5rem;
+  outline: 1px solid lime;
     grid-template-areas:
   'nul two'
   'nul three'
   'nul four';
-   /* grid-template-columns: 1fr 25fr; */
+  grid-template-columns: 1fr 10fr;
 }
 
 figure#pijl1{grid-area: nul;}
@@ -332,12 +332,12 @@ figure.tijdslijn img{
 
 div#apr-juni{
    display: grid;
-    column-gap: 1rem;
+    column-gap: 0.5rem;
     grid-template-areas:
   'nul two'
   'nul three'
   'nul four';
-   /* grid-template-columns: 1fr 25fr; */
+   grid-template-columns: 1fr 10fr;
 }
 
 figure#pijl2{grid-area: nul;}
@@ -348,12 +348,12 @@ figure#fotobloesem{grid-area: four;}
 
 div#juli-sept{
    display: grid;
-    column-gap: 1rem;
+   column-gap: 0.5rem;
     grid-template-areas:
   'nul two'
   'nul three'
   'nul four';
-  /* grid-template-columns: 1fr 4fr; */
+    grid-template-columns: 1fr 10fr;
 }
 figure#pijl3{grid-area: nul;}
 figure#pijl3lig{grid-area: one;}
@@ -362,12 +362,12 @@ p#groeneolijf{grid-area: three;}
 figure#fotogroeneolijf{grid-area: four;}
 
 div#okt{display: grid;
-    column-gap: 1rem;
+    column-gap: 0.5rem;
     grid-template-areas:
   'nul two'
   'nul three'
   'nul four';
-  /* grid-template-columns: 1fr 25fr; */
+   grid-template-columns: 1fr 10fr;
 }
 
 figure#pijl4{grid-area: nul;}
@@ -402,12 +402,12 @@ p#molen{grid-area: seven;}
 p#geperst{grid-area: eight;} */
 
 div#nov-dec{ display: grid;
-    column-gap: 1rem;
+    column-gap: 0.5rem;
     grid-template-areas:
     'nul two'
     'nul three'
     'nul four';
-    /* grid-template-columns: 1fr 25fr; */
+     grid-template-columns: 1fr 10fr;
   }
 figure#pijl5{grid-area: nul;}
 figure#pijl5lig{grid-area: one;}
@@ -415,7 +415,8 @@ h2#novem-decem{grid-area: two;}
 div#oogsten{grid-area: three;}
 div#persen{grid-area: four;}
 
-  
+#extrafoto{ display: none; }
+
 
 
 /*Homepage elke gridbox zijn eigen hover doorzichtig groene overlay hieronder*/
@@ -572,7 +573,7 @@ nav.zijmenu > ul > li{
       width: 32rem;
     height: 6rem;
     }
-    .zijmenu.active {
+    .zijmenu.active{
       right: 2.5rem;
       top: 8rem;
 }  
@@ -589,7 +590,6 @@ nav.zijmenu > ul > li{
 div#intro > p{
 font-size: 1.3rem;
 }
-}
 
 div#feb-maart,
 div#apr-juni,
@@ -597,6 +597,8 @@ div#juli-sept,
 div#okt,
 div#nov-dec {
   grid-template-columns: 1fr 18fr;
+  column-gap: 1rem;
+}
 }
 
 /* Medium devices (landscape tablets, 700px and up) */
