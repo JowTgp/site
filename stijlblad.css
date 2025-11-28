@@ -310,6 +310,7 @@ div#nov-dec {
 div#feb-maart{
    display: grid;
     column-gap: 1rem;
+  outline: 1px solid red;
     grid-template-areas:
   'nul two'
   'nul three'
@@ -331,7 +332,6 @@ figure.tijdslijn img{
 
 div#apr-juni{
    display: grid;
-   outline: 1px solid blue;
     column-gap: 1rem;
     grid-template-areas:
   'nul two'
@@ -349,7 +349,6 @@ figure#fotobloesem{grid-area: four;}
 div#juli-sept{
    display: grid;
     column-gap: 1rem;
-     outline: 1px solid rgb(103, 103, 216);
     grid-template-areas:
   'nul two'
   'nul three'
@@ -364,7 +363,6 @@ figure#fotogroeneolijf{grid-area: four;}
 
 div#okt{display: grid;
     column-gap: 1rem;
-    outline: 1px solid rgb(146, 21, 90);
     grid-template-areas:
   'nul two'
   'nul three'
@@ -405,7 +403,6 @@ p#geperst{grid-area: eight;} */
 
 div#nov-dec{ display: grid;
     column-gap: 1rem;
-    outline: 1px solid lime;
     grid-template-areas:
     'nul two'
     'nul three'
