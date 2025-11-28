@@ -333,6 +333,7 @@ figure.tijdslijn img{
 
 div#apr-juni{
    display: grid;
+   outline: 1px solid red;
     column-gap: 1rem;
     grid-template-areas:
   'nul two'
