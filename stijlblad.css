@@ -303,7 +303,7 @@ main#productieproces{
 div#feb-maart{
    display: grid;
     column-gap: 1rem;
-    outline: 1px solid rebeccapurple;
+    outline: 1px solid lime;
     grid-template-areas:
   'nul two'
   'nul three'
@@ -318,7 +318,7 @@ figure#fotosnoei{grid-area: four;}
 
 figure.tijdslijn img{
   
-  width: auto;
+  width: 85%;
    object-fit: fill;
    height: 100%;
 }
