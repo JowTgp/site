@@ -316,7 +316,7 @@ div#feb-maart{
   'nul three'
   'nul four';
 
-   grid-template-columns: 1fr 15fr;
+   grid-template-columns: 1fr 10fr;
 }
 
 figure#pijl1{grid-area: nul;}
@@ -333,14 +333,14 @@ figure.tijdslijn img{
 
 div#apr-juni{
    display: grid;
-   outline: 1px solid red;
+   outline: 1px solid lime;
     column-gap: 1rem;
     grid-template-areas:
   'nul two'
   'nul three'
   'nul four';
 
-   grid-template-columns: 1fr 15fr;
+   grid-template-columns: 1fr 10fr;
 }
 
 figure#pijl2{grid-area: nul;}
@@ -357,6 +357,8 @@ div#juli-sept{
   'nul two'
   'nul three'
   'nul four';
+
+  grid-template-columns: 1fr 10fr;
 }
 figure#pijl3{grid-area: nul;}
 figure#pijl3lig{grid-area: one;}
@@ -371,6 +373,8 @@ div#okt{display: grid;
   'nul two'
   'nul three'
   'nul four';
+
+  grid-template-columns: 1fr 10fr;
 }
 
 figure#pijl4{grid-area: nul;}
@@ -411,6 +415,8 @@ div#nov-dec{ display: grid;
     'nul two'
     'nul three'
     'nul four';
+
+    grid-template-columns: 1fr 10fr;
   }
 figure#pijl5{grid-area: nul;}
 figure#pijl5lig{grid-area: one;}
@@ -596,6 +602,14 @@ font-size: 1.3rem;
 }
 }
 
+div#feb-maart,
+div#apr-juni,
+div#juli-sept,
+div#okt,
+div#nov-dec {
+  grid-template-columns: 1fr 15fr;
+}
+
 /* Medium devices (landscape tablets, 700px and up) */
 @media (min-width: 700px) {
 header{
@@ -750,6 +764,14 @@ div#nov-dec{ display: grid;
     margin-left: 1rem;
     outline: 1px solid red;
   } /* want div#nov-dec neemt 2 kolommen in dus column-gap 1rem in de divs erboven nabootsen met marign left*/
+
+div#feb-maart,
+div#apr-juni,
+div#juli-sept,
+div#okt,
+div#nov-dec {
+  grid-template-columns: auto;
+}
 
   /* #extrafoto{
     display: inline-block;
