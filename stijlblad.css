@@ -345,14 +345,13 @@ div#juli-sept{
   'nul three'
   'nul four';
 }
-figure#pijl3{grid-area: nul;
-align-self: center;}
+figure#pijl3{grid-area: nul;}
 figure#pijl3lig{grid-area: one;}
 h2#jul-sept{grid-area: two;}
 p#groeneolijf{grid-area: three;}
 figure#fotogroeneolijf{grid-area: four;}
 
-div#okt{ display: grid;
+div#okt{display: grid;
     column-gap: 1rem;
     grid-template-areas:
   'nul two'
@@ -360,8 +359,7 @@ div#okt{ display: grid;
   'nul four';
 }
 
-figure#pijl4{grid-area: nul;
-align-self: center;}
+figure#pijl4{grid-area: nul;}
 figure#pijl4lig{grid-area: one;}
 h2#okto{grid-area: two;}
 p#opleggen{grid-area: three;}
@@ -407,7 +405,6 @@ div#persen{grid-area: four;}
 
   #extrafoto{
     display: none;
-   
   } 
 
 
@@ -736,7 +733,7 @@ div#nov-dec{ display: grid;
   }
   div#persen{
     margin-left: 1rem;
-    outline: 1px solid lime;
+    outline: 1px solid red;
   } /* want div#nov-dec neemt 2 kolommen in dus column-gap 1rem in de divs erboven nabootsen met marign left*/
 
   /* #extrafoto{
