@@ -310,7 +310,6 @@ div#nov-dec {
 div#feb-maart{
    display: grid;
     column-gap: 1rem;
- 
     grid-template-areas:
   'nul two'
   'nul three'
@@ -327,13 +326,13 @@ figure#fotosnoei{grid-area: four;}
 
 figure.tijdslijn img{
   height: 100%;
-  width: 100%;
+  width: auto;
    object-fit: fill;
 }
 
 div#apr-juni{
    display: grid;
-   outline: 1px solid lime;
+   outline: 1px solid red;
     column-gap: 1rem;
     grid-template-areas:
   'nul two'
