@@ -567,7 +567,7 @@ nav.zijmenu > ul > li{
     }
     .zijmenu.active {
       right: 2.5rem;
-  top: 8rem;
+      top: 8rem;
 }  
     
   main#home{
@@ -736,6 +736,7 @@ div#nov-dec{ display: grid;
   }
   div#persen{
     margin-left: 1rem;
+    outline: 1px solid lime;
   } /* want div#nov-dec neemt 2 kolommen in dus column-gap 1rem in de divs erboven nabootsen met marign left*/
 
   /* #extrafoto{
