@@ -316,7 +316,7 @@ div#feb-maart{
   'nul three'
   'nul four';
 
-   grid-template-columns: 1fr 10fr;
+   grid-template-columns: 1fr 6fr;
 }
 
 figure#pijl1{grid-area: nul;}
@@ -340,7 +340,7 @@ div#apr-juni{
   'nul three'
   'nul four';
 
-   grid-template-columns: 1fr 10fr;
+   grid-template-columns: 1fr 6fr;
 }
 
 figure#pijl2{grid-area: nul;}
@@ -374,7 +374,7 @@ div#okt{display: grid;
   'nul three'
   'nul four';
 
-  grid-template-columns: 1fr 10fr;
+  grid-template-columns: 1fr 6fr;
 }
 
 figure#pijl4{grid-area: nul;}
@@ -410,13 +410,13 @@ p#geperst{grid-area: eight;} */
 
 div#nov-dec{ display: grid;
     column-gap: 1rem;
-    outline: 1px solid green;
+    outline: 1px solid red;
     grid-template-areas:
     'nul two'
     'nul three'
     'nul four';
 
-    grid-template-columns: 1fr 10fr;
+    grid-template-columns: 1fr 6fr;
   }
 figure#pijl5{grid-area: nul;}
 figure#pijl5lig{grid-area: one;}
