@@ -285,7 +285,13 @@ main#productieproces{
   align-items: start;
 } 
 
-
+div#feb-maart,
+div#apr-juni,
+div#juli-sept,
+div#okt,
+div#nov-dec {
+  align-items: start;
+}
   div#voorste{grid-area: one;}
   div#feb-maart{grid-area: two;}
   div#apr-juni{grid-area: three;}
@@ -322,6 +328,7 @@ figure#fotosnoei{grid-area: four;}
 figure.tijdslijn img{
   
   width: auto;
+  max-width: none;
    object-fit: contain;
    height: 100%;
 }
