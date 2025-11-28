@@ -310,7 +310,7 @@ div#nov-dec {
 div#feb-maart{
    display: grid;
   column-gap: 0.5rem;
-  outline: 1px solid lime;
+  outline: 1px solid blue;
     grid-template-areas:
   'nul two'
   'nul three'
