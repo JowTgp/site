@@ -340,7 +340,7 @@ figure#fotobloesem{grid-area: four;}
 div#juli-sept{
    display: grid;
     column-gap: 1rem;
-     outline: 1px solid blue;
+     outline: 1px solid rgb(103, 103, 216);
     grid-template-areas:
   'nul two'
   'nul three'
@@ -354,7 +354,7 @@ figure#fotogroeneolijf{grid-area: four;}
 
 div#okt{display: grid;
     column-gap: 1rem;
-    outline: 1px solid green;
+    outline: 1px solid rgb(13, 87, 13);
     grid-template-areas:
   'nul two'
   'nul three'
