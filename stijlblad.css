@@ -283,13 +283,7 @@ main#productieproces{
   'six';
 } 
 
-/* div#feb-maart,
-div#apr-juni,
-div#juli-sept,
-div#okt,
-div#nov-dec {
-  align-items: start;
-} */
+
   div#voorste{grid-area: one;}
   div#feb-maart{grid-area: two;}
   div#apr-juni{grid-area: three;}
@@ -297,20 +291,11 @@ div#nov-dec {
   div#okt{grid-area: five;}
   div#nov-dec{grid-area: six;}
 
-/* figure.afmeting{
-    max-height: 100%; /*25rem; */
-   /*  max-width: 30rem;} */
-
-  /* figure#ondertekst{padding: 1.8rem;} */
- /*img.afmeting{
-    max-height: 100%; /*25rem; */
-   /*  max-width: 35rem; }*/ /* max op img want als max op figure, werken paddging en margin niet meer omdat de img over de max van figure komen */ 
 
 /*GRid per tijdslijnblok*/
 div#feb-maart{
    display: grid;
   column-gap: 0.5rem;
-  outline: 1px solid blue;
     grid-template-areas:
   'nul two'
   'nul three'
@@ -523,14 +508,12 @@ ul.menu{
   display: none;
 }
 nav.zijmenu{
- 
   width: 13rem;
   max-width: 450px;
   position: absolute; /*om in header te blijven staan, ook bij scrollen*/
   right: -100vw;
   display: flex;
   flex-direction: column;
-  align-items: left;
   justify-content: flex-start;
   text-align: left;
   transition: .3s ease;
