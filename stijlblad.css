@@ -726,14 +726,18 @@ grid-template-areas:
 }
 
 div#nov-dec{ display: grid;
-   column-gap: 1rem;
+    column-gap: 1rem;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:
   'one one'
   'two two'
   'three four'
-  
   ;
   }
+  div#persen{
+    margin-left: 1rem;
+  } /* want div#nov-dec neemt 2 kolommen in dus column-gap 1rem in de divs erboven nabootsen met marign left*/
+
   /* #extrafoto{
     display: inline-block;
   }  */
