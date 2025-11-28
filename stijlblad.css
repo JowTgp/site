@@ -322,7 +322,7 @@ figure#fotosnoei{grid-area: four;}
 figure.tijdslijn img{
   
   width: auto;
-   object-fit: fill;
+   object-fit: contain;
    height: 100%;
 }
 
