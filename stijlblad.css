@@ -281,17 +281,15 @@ main#productieproces{
   'four'
   'five'
   'six';
-  grid-auto-rows: auto; 
-  align-items: start;
 } 
 
-div#feb-maart,
+/* div#feb-maart,
 div#apr-juni,
 div#juli-sept,
 div#okt,
 div#nov-dec {
   align-items: start;
-}
+} */
   div#voorste{grid-area: one;}
   div#feb-maart{grid-area: two;}
   div#apr-juni{grid-area: three;}
@@ -326,11 +324,12 @@ p#snoei{grid-area: three;}
 figure#fotosnoei{grid-area: four;}
 
 figure.tijdslijn img{
-  
+  height: 100%;
   width: auto;
-  max-width: none;
-   object-fit: contain;
-   height: 100%;
+  
+   object-fit: fill;
+  
+   
 }
 
 div#apr-juni{
@@ -341,6 +340,7 @@ div#apr-juni{
   'nul three'
   'nul four';
 }
+
 figure#pijl2{grid-area: nul;}
 figure#pijl2lig{grid-area: one;}
 h2#april-mei-juni{grid-area: two;}
