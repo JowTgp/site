@@ -303,7 +303,7 @@ main#productieproces{
 div#feb-maart{
    display: grid;
     column-gap: 1rem;
-  
+   outline: 1px solid red;
     grid-template-areas:
   'nul two'
   'nul three'
