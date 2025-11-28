@@ -303,7 +303,7 @@ main#productieproces{
 div#feb-maart{
    display: grid;
     column-gap: 1rem;
-   outline: 1px solid red;
+    outline: 1px solid lime;
     grid-template-areas:
   'nul two'
   'nul three'
@@ -320,12 +320,12 @@ figure.tijdslijn img{
   height: 100%;
   width: auto;
    object-fit: fill;
-   
 }
 
 div#apr-juni{
    display: grid;
     column-gap: 1rem;
+   outline: 1px solid red;
     grid-template-areas:
   'nul two'
   'nul three'
@@ -340,6 +340,7 @@ figure#fotobloesem{grid-area: four;}
 div#juli-sept{
    display: grid;
     column-gap: 1rem;
+     outline: 1px solid blue;
     grid-template-areas:
   'nul two'
   'nul three'
@@ -353,6 +354,7 @@ figure#fotogroeneolijf{grid-area: four;}
 
 div#okt{display: grid;
     column-gap: 1rem;
+    outline: 1px solid green;
     grid-template-areas:
   'nul two'
   'nul three'
