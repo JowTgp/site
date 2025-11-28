@@ -302,9 +302,9 @@ div#nov-dec {
    /*  max-width: 30rem;} */
 
   /* figure#ondertekst{padding: 1.8rem;} */
- /*  img.afmeting{
+ /*img.afmeting{
     max-height: 100%; /*25rem; */
-     /*max-width: 30rem; } */ /* max op img want als max op figure, werken paddging en margin niet meer omdat de img over de max van figure komen */ 
+   /*  max-width: 35rem; }*/ /* max op img want als max op figure, werken paddging en margin niet meer omdat de img over de max van figure komen */ 
 
 /*GRid per tijdslijnblok*/
 div#feb-maart{
@@ -315,7 +315,7 @@ div#feb-maart{
   'nul three'
   'nul four';
 
-   grid-template-columns: 1fr 4fr;
+   grid-template-columns: 1fr 25fr;
 }
 
 figure#pijl1{grid-area: nul;}
@@ -327,19 +327,19 @@ figure#fotosnoei{grid-area: four;}
 figure.tijdslijn img{
   height: 100%;
   width: 100%;
-   object-fit: fill;
+  object-fit: fill;
 }
 
 div#apr-juni{
    display: grid;
-   outline: 1px solid red;
+   outline: 1px solid blue;
     column-gap: 1rem;
     grid-template-areas:
   'nul two'
   'nul three'
   'nul four';
 
-   grid-template-columns: 1fr 4fr;
+   grid-template-columns: 1fr 25fr;
 }
 
 figure#pijl2{grid-area: nul;}
@@ -373,7 +373,7 @@ div#okt{display: grid;
   'nul three'
   'nul four';
 
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr 25fr;
 }
 
 figure#pijl4{grid-area: nul;}
@@ -415,7 +415,7 @@ div#nov-dec{ display: grid;
     'nul three'
     'nul four';
 
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 25fr;
   }
 figure#pijl5{grid-area: nul;}
 figure#pijl5lig{grid-area: one;}
