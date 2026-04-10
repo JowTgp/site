@@ -1,36 +1,28 @@
-*{  
-  background-color: rgb(247, 247, 247);  
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  /*outline: 1px solid lime;*/
-  
-}
+
 :root{
   --lettertype: 'Carlito', Calibri, sans-serif;
   --kleur: rgb(61, 90, 45);
   --achtergrondkleur: rgb(247, 247, 247);
- 
-  /* --kleur: rgb(77, 114, 57); tekst donkerder maken*/
- 
+}
+
+*{  
+  background-color: var(--achtergrondkleur);  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 header{
-    /*border-bottom: solid 2rem rgb(94, 166, 109);*/
-    border-bottom: solid 2rem rgb(82, 127, 58);
-    
+    border-bottom: solid 1.8rem rgb(82, 127, 58);
     margin-bottom: 1.5rem;
-    top: 0;
+    /* top: 0; */
     width: 100%;
     box-shadow: 0px 5px 20px #999;
-    
-   /* align-items: baseline;*/
     z-index: 2;
     display: flex;
      /*flexbox maken om navigatie en klein logo naast elkaar te krijgen, bij mediaquery terug block maken vanaf ham menu weg*/ 
      position: relative; /* Om zijmenu absoluut te positioneren tov header ipv volledige pagina, anders beweegt zijmenu mee bij scrollen */
 }
-
 
 header img.kleinlogo, header img.grootlogo{
   /*max-width: 100%;
@@ -38,44 +30,29 @@ header img.kleinlogo, header img.grootlogo{
   /*margin-top: 1.2rem;*/
  
 }
-/* menu flex*/
-ul.menu{
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  justify-content: space-between;
-  /*align-items: flex-start;*/
- padding: 1rem;
-}
+/* menu*/
 nav ul{
   list-style: none;
-   background: transparent;
-   
+  background: transparent;
 }
 ul.menu li{
-    margin-left: 1rem;
-   margin-right: 1rem;
+  margin: 0 0.5rem;
 }
-
 nav li a{
-  color: rgb(61, 90, 45);
+color: var(--kleur);
 font-size: 1.2rem;
 }
-
 div#logo{
-  padding-top: 1.2rem;
+  padding-top: 0.5rem;
 }
+.grootlogo{display: none;}
+/* menu einde*/
 
-/* menu flex einde*/
-
-.grootlogo{
-  display: none;
-}
 
 html{overflow-x: hidden;} /*niet weglaten - beide moeten voor menu*/
 body{
   max-width: 80em;
-  max-width: 100%; /*of 100%*/
+  max-width: 100%; 
   margin: 0px auto;
   font-family: var(--lettertype);
   font-size: 1.4rem;
@@ -156,11 +133,11 @@ div#intro, a#olijfolie, a#proces, a#fincas, a#wij {
   background-color: var(--kleur);
   padding: 1.2rem;
   border: 5px solid rgb(157, 193, 131); 
-  color: rgb(247, 247, 247);
+  color: var(--achtergrondkleur);
   text-shadow: 4px 3px 3px rgba(0, 0, 0, 0.6); 
 } 
 div#intro{
-  background-color: rgb(247, 247, 247);
+  background-color: var(--achtergrondkleur);
 border: none;
 text-shadow: none;
 padding: 0px;
@@ -444,20 +421,19 @@ nav ul li:active::after{
   background: rgb(237, 125, 49);
 }
 
-/*einde nav lijntjes*/
-
-
-/*navigatie kleurt welke pagina actief is met class current*/
+/*navigatie toontt welke pagina actief is met class current*/
 li.current::after{
   content: '';
   width: 100%;
   height: 2px;
-  background: rgb(237, 125, 49);
+  background: #FFC000(237, 125, 49);
   display: block;
-  margin-top: 2px;
-  /*border-bottom: 2.5px solid #FFC000;
-  bottom: -0.5px;*/
+  margin-top: 2px; 
+ /* border-bottom: 2.5px solid #FFC000; */
+  /* bottom: -0.5px; */
 }
+/*einde nav lijntjes*/
+
  /*Ham-cross menu, bronnen: https://github.com/treehouse/ham-menu en https://codepen.io/james2doyle/pen/edNoPe*/
 
 .hammenu{
@@ -597,8 +573,7 @@ header{
   flex-direction: row;
   gap: 1rem;
   justify-content: space-between;
-  /*align-items: flex-start;*/
- padding: 1rem;
+  padding: 1rem 1rem 0.5rem;
 }
 nav.zijmenu{
   display: none;
