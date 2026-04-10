@@ -1,7 +1,7 @@
-
 :root{
   --lettertype: 'Carlito', Calibri, sans-serif;
   --kleur: rgb(61, 90, 45);
+  --kleurstreep: rgb(82, 127, 58);
   --achtergrondkleur: rgb(247, 247, 247);
 }
 
@@ -13,10 +13,10 @@
 }
 
 header{
-    border-bottom: solid 1.8rem rgb(82, 127, 58);
+    border-bottom: solid 1.8rem var(--kleurstreep);
     margin-bottom: 1.5rem;
     /* top: 0; */
-    width: 100%;
+    /* width: 100%; */
     box-shadow: 0px 5px 20px #999;
     z-index: 2;
     display: flex;
@@ -24,13 +24,14 @@ header{
      position: relative; /* Om zijmenu absoluut te positioneren tov header ipv volledige pagina, anders beweegt zijmenu mee bij scrollen */
 }
 
-header img.kleinlogo, header img.grootlogo{
-  /*max-width: 100%;
+/*header img.kleinlogo, header img.grootlogo{
+  max-width: 100%;
   height: auto;*/
-  /*margin-top: 1.2rem;*/
+  /*margin-top: 1.2rem;
+  }*/
  
-}
-/* menu*/
+
+/* menu+logo*/
 nav ul{
   list-style: none;
   background: transparent;
@@ -46,74 +47,75 @@ div#logo{
   padding-top: 0.5rem;
 }
 .grootlogo{display: none;}
-/* menu einde*/
 
-
-html{overflow-x: hidden;} /*niet weglaten - beide moeten voor menu*/
-body{
-  max-width: 80em;
-  max-width: 100%; 
-  margin: 0px auto;
-  font-family: var(--lettertype);
-  font-size: 1.4rem;
-  color: var(--kleur);
- overflow-x: hidden; /* zodat zijmenu niet zichtbaar kan worden als niet actief , bijvoorbeeld als scherm GSM roteren staand-liggend - zowel htlm als body moeten getarged worden anders werkt het niet*/
-}
-main{
-  padding: 1em;
-  max-width: 80em;
-}
-h1{
-margin-bottom: 1rem;
-  font-size: 2rem;
-}
-h2{margin-bottom: 1.1rem;
-    font-size: 1.5rem;
-  }
-figcaption{
-  font-size: 1.2rem;
-  /* margin-bottom: 0.3rem; */
-}
-p.bronvermelding{font-size: 0.9rem;}
-
-p{margin-bottom: 1.1rem;}
-
-figure{
-  margin-bottom: 1rem;
-}
-img{
-  max-width: 100%;
-  height: auto;
-}
-iframe{
-  max-width: 100%;
-}
 a{
   text-decoration: none;
   background-color: transparent;
 }
+/* menu+logo einde*/
+
+
+html{overflow-x: hidden;} /*niet weglaten - beide moeten voor menu*/
+
+body{
+  max-width: 100em;
+  margin: 0px auto;   /*0 verticaal top bottom, horizontaal links rechts auto = gecentreerd/gelijke margin binnen container */
+  font-family: var(--lettertype);
+  font-size: 1.4rem;
+  color: var(--kleur);
+  overflow-x: hidden; /* zodat zijmenu niet zichtbaar kan worden als niet actief , bijvoorbeeld als scherm GSM roteren staand-liggend - zowel htlm als body moeten getarged worden anders werkt het niet*/
+}
+
+main{
+  padding: 1em;
+  margin: 0px auto;
+}
+
+h1{
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+h2{
+  margin-bottom: 1.1rem;
+  font-size: 1.5rem;
+}
+
+figcaption{
+  font-size: 1.2rem;
+}
+p.bronvermelding{font-size: 0.9rem;}
+
+p{
+  margin-bottom: 1.1rem;
+}
+
+figure{
+  margin-bottom: 1rem;
+}
+
+img{
+  max-width: 100%; /*RWD afbeeldingen blijven in scherm bij verkleinen scherm*/
+  height: auto;    /*laten staan voor verhouding h-b te behouden bij max width 100%*/
+}
+
+iframe{
+  max-width: 100%;
+}
 
 footer{
-  background-color: rgb(82, 127, 58);
-  color:rgb(247, 247, 247);
+  background-color: var(--kleurstreep);
+  color: var(--achtergrondkleur);
   font-size: 1rem;
-      border-bottom: solid 1.2rem rgb(247, 247, 247);
-      
-      padding: 0.5rem 0;
-      padding-left: 1.2rem;
-      margin-top: 1rem;
-
+  border-bottom: solid 1.2rem rgb(247, 247, 247);
+  padding: 0.5rem 1.5rem;
+  max-width: 100em; /* footer width beperken anders gaat tekst helemaal mee naar links, nu nog net in beeld bij groot scherm + bij klein scherm niet tte veel naar links gepadding*/
+  margin: 10px auto; 
 }
 
-article#deel1{
-    border-bottom: dotted 3px var(--kleur);
+.onderlijn{
+  border-bottom: dotted 3px var(--kleur);
     margin-bottom: 1.2em;
-    padding-bottom: 0.8em;
-}
-
-div.onderlijn{
-  border-bottom: solid 0.1rem var(--kleur);
-  margin-bottom: 1.2rem;
+    padding-bottom: 0.5em;
 }
 
 
@@ -752,21 +754,11 @@ div#okt{
  
   }
 
-     main, nav, div#logo{
+    main, nav, div#logo{
     max-width: 50em;
     margin: 0 auto;
-}
-main{
-margin: 0 auto;/*centraal centreren*/
-}
+    }  /*grote schermen tekst breedte beperken, body blijft maxwidth 100em, groene lijn blijft zo maar rest beperkt*/
 
-  /*div.maxbreedte{
- outline: 1px solid lime;
-  max-width: 1300px;
-  margin-left: 0;
-  margin-right: auto;
-  }*/
-  
 
   main article{
     column-count: 3;
