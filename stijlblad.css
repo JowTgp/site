@@ -44,7 +44,7 @@ color: var(--kleur);
 font-size: 1.2rem;
 }
 div#logo{
-  padding-top: 0.5rem;
+  padding-top: 0.8rem;
 }
 .grootlogo{display: none;}
 
@@ -106,7 +106,7 @@ footer{
   background-color: var(--kleurstreep);
   color: var(--achtergrondkleur);
   font-size: 1rem;
-  border-bottom: solid 1.2rem rgb(247, 247, 247);
+  border-bottom: solid 1.2rem var(--achtergrondkleur);
   padding: 0.5rem 1.5rem;
   max-width: 100em; /* footer width beperken anders gaat tekst helemaal mee naar links, nu nog net in beeld bij groot scherm + bij klein scherm niet tte veel naar links gepadding*/
   margin: 10px auto; 
@@ -122,7 +122,7 @@ footer{
 /*grid home*/
 main#home{
   display: grid;
-  gap: 1.3rem; 
+  gap: 1.3rem;
   grid-template-areas: 
   'one'
   'two'
@@ -131,25 +131,9 @@ main#home{
   'five'
   ;
 }
-div#intro, a#olijfolie, a#proces, a#fincas, a#wij {
-  background-color: var(--kleur);
-  padding: 1.2rem;
-  border: 5px solid rgb(157, 193, 131); 
-  color: var(--achtergrondkleur);
-  text-shadow: 4px 3px 3px rgba(0, 0, 0, 0.6); 
-} 
-div#intro{
-  background-color: var(--achtergrondkleur);
-border: none;
-text-shadow: none;
-padding: 0px;
-gap: 0px;
-}
 
 div#intro > p{
-/*background-color: var(--kleur);*/
 font-size: 1.2rem;
-color: var(--kleur);
 }
 
 #intro{
@@ -158,9 +142,6 @@ color: var(--kleur);
 
 #olijfolie{
   grid-area: two;
-
-  color: rgb(247, 247, 247);
-  font-size: 2rem;
   background-image: url("img/homeolijfolie.jpg");
   text-align: left;
   flex-direction: column;
@@ -169,21 +150,15 @@ color: var(--kleur);
 
 #proces{
   grid-area: three;
-
-  color: rgb(247, 247, 247);
-  font-size: 2rem;
   background-image: url("img/proces1.jpg");
   text-align: right;
-  flex-direction:row;
+  flex-direction: row;
  padding-bottom: 0.7rem;
 }
 
 #wij{
   grid-area: four;
-
-  color: rgb(247, 247, 247);
-  font-size: 2rem;
-  background-image: url(img/wij.JPG);
+  background-image: url("img/wij.jpg");
   text-align: left;
   flex-direction:column;
  padding-bottom: 0.7rem;
@@ -191,29 +166,53 @@ color: var(--kleur);
 
 #fincas{
 grid-area: five;
-
-color: rgb(247, 247, 247);
-font-size: 2rem;
 background-image: url("img/fincas1.jpg");    
 text-align: right;
 flex-direction: column;
 padding-bottom: 0.1rem;
 }
 
-#olijfolie, #proces, #fincas, #wij{
+a#olijfolie, a#proces, a#fincas, a#wij {
+  background-color: var(--kleur);
+  padding: 1.2rem;
+  border: 5px solid rgb(157, 193, 131); 
+  color: var(--achtergrondkleur);
+  text-shadow: 4px 3px 3px rgba(0, 0, 0, 0.6); 
+  font-size: 2rem;
+
   background-size: cover;
   background-position: center;
-  display: flex;
+  display: flex;               /*om letters op juiste plaats te krijgen in combi met flex direction per blok en justify content*/
   justify-content: flex-end;
-  min-height: 8em;
-position: relative;/* voor groene achtergrond bij hover anders hele achtergrond groen, nu enkel deze blok gekleurd bij hover*/
-z-index: 0;
+  min-height: 7em;             /*behouden, anders worden foto's te klein op kleine schermen*/
+  position: relative;   /* tov pseudo element hiernoder, voor groene achtergrond bij hover anders hele achtergrond groen, nu enkel deze blok gekleurd bij hover*/
+  z-index: 0;
+} 
+
+/*Homepage elke gridbox zijn eigen hover doorzichtig groene overlay hieronder*/
+
+#olijfolie::before, #proces::before, #wij::before, #fincas::before {
+  content: '';  /* Maakt het pseudo-element zichtbaar */
+  position: absolute;  /* Plaatst de overlay bovenop de achtergrond + zelfde positie als blok olijfolie  (hieronder; 0000) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 126, 0, 0.3);  
+  opacity: 0;  /* Start met geen zichtbare overlay */
+ 
 }
+
+#olijfolie:hover::before, #proces:hover::before, #wij:hover::before, #fincas:hover::before {
+  opacity: 1;  /* Maak de overlay zichtbaar bij hover */
+  transition: opacity 0.4s ease; 
+}
+/*einde groene hover*/
+
 
 /*grid wij en de omgeving tweede deel*/
 div#deel2{
 display: grid;
-  grid-template-columns: 1fr;
   gap: 1.3rem;
   grid-template-areas:
   'one'
@@ -230,8 +229,7 @@ figure#santolea{grid-area: four;}
 /*Grid Finca's*/
 main#finca{
   display: grid;
- /* grid-template-columns: 1fr;*/
-  gap: 18px;
+  gap: 1.3rem;
   grid-template-areas:
   'one'
   'two'
@@ -249,21 +247,25 @@ div#caseta{grid-area: five;}
 /*Grid main Tijdlijn*/
 
 figure.tijdslijnliggend img{
-   display: none;
+  display: none;
+}
+
+figure.tijdslijn img{
+  height: 100%;
+  width: 100%; /* om pijlen in verhouding even groot en breed te houden in elke schermgrootte */
+  object-fit: fill;
 }
 
 main#productieproces{
-    display: grid;
-    grid-template-areas:
+  display: grid;
+  grid-template-areas:
   'one'
   'two'
   'three'
   'four'
   'five'
   'six';
-} 
-
-
+}
   div#voorste{grid-area: one;}
   div#feb-maart{grid-area: two;}
   div#apr-juni{grid-area: three;}
@@ -271,17 +273,18 @@ main#productieproces{
   div#okt{grid-area: five;}
   div#nov-dec{grid-area: six;}
 
-
 /*GRid per tijdslijnblok*/
-div#feb-maart{
-   display: grid;
+
+div#feb-maart, div#apr-juni, div#juli-sept, div#okt, div#nov-dec{
+  display: grid;
   column-gap: 0.5rem;
-    grid-template-areas:
+  grid-template-areas:
   'nul two'
   'nul three'
   'nul four';
   grid-template-columns: 1fr 10fr;
 }
+/*feb-maart*/
 
 figure#pijl1{grid-area: nul;}
 figure#pijl1lig{grid-area: one;}
@@ -289,21 +292,7 @@ h2#febru-maart{grid-area: two;}
 p#snoei{grid-area: three;}
 figure#fotosnoei{grid-area: four;}
 
-figure.tijdslijn img{
-  height: 100%;
-  width: 100%; /* om pijlen even groot en breed te houden in elke schermgrootte */
-  object-fit: fill;
-}
-
-div#apr-juni{
-   display: grid;
-    column-gap: 0.5rem;
-    grid-template-areas:
-  'nul two'
-  'nul three'
-  'nul four';
-   grid-template-columns: 1fr 10fr;
-}
+/*april-juni*/
 
 figure#pijl2{grid-area: nul;}
 figure#pijl2lig{grid-area: one;}
@@ -311,29 +300,15 @@ h2#april-mei-juni{grid-area: two;}
 p#bemesting{grid-area: three;}
 figure#fotobloesem{grid-area: four;}
 
-div#juli-sept{
-   display: grid;
-   column-gap: 0.5rem;
-    grid-template-areas:
-  'nul two'
-  'nul three'
-  'nul four';
-    grid-template-columns: 1fr 10fr;
-}
+/*juli-sept*/
+
 figure#pijl3{grid-area: nul;}
 figure#pijl3lig{grid-area: one;}
 h2#jul-sept{grid-area: two;}
 p#groeneolijf{grid-area: three;}
 figure#fotogroeneolijf{grid-area: four;}
 
-div#okt{display: grid;
-    column-gap: 0.5rem;
-    grid-template-areas:
-  'nul two'
-  'nul three'
-  'nul four';
-   grid-template-columns: 1fr 10fr;
-}
+/*oktober*/
 
 figure#pijl4{grid-area: nul;}
 figure#pijl4lig{grid-area: one;}
@@ -341,68 +316,13 @@ h2#okto{grid-area: two;}
 p#opleggen{grid-area: three;}
 figure#fotoopleggen{grid-area: four;}
 
-/* div#nov-dec{ display: grid;
-    column-gap: 1rem;
-    grid-template-areas:
-  'nul two'
-  'nul three'
-  'nul four'
-  'nul five'
-  'nul six'
-  'nul seven'
-  'nul eight'
-  'nul';
+/*nov-dec*/
 
-}
-
-figure#pijl5{grid-area: nul;
-align-self: center;}
-figure#pijl5lig{grid-area: one;}
-h2#novem-decem{grid-area: two;}
-p#oogsten{grid-area: three;}
-figure#fotooogsten{grid-area: four;}
-p#snel{grid-area: five;}
-figure#fotosnel{grid-area: six;}
-p#molen{grid-area: seven;}
-p#geperst{grid-area: eight;} */
-
-div#nov-dec{ display: grid;
-    column-gap: 0.5rem;
-    grid-template-areas:
-    'nul two'
-    'nul three'
-    'nul four';
-     grid-template-columns: 1fr 10fr;
-  }
 figure#pijl5{grid-area: nul;}
 figure#pijl5lig{grid-area: one;}
 h2#novem-decem{grid-area: two;}
 div#oogsten{grid-area: three;}
 div#persen{grid-area: four;}
-
-#extrafoto{ display: none; }
-
-
-
-/*Homepage elke gridbox zijn eigen hover doorzichtig groene overlay hieronder*/
-
-#olijfolie::before, #proces::before, #wij::before, #fincas::before {
-  content: '';  /* Maakt het pseudo-element zichtbaar */
-  position: absolute;  /* Plaatst de overlay bovenop de achtergrond + zelfde positie als blok olijfolie  (hieronder; 0000) */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 126, 0, 0.3);  
-  opacity: 0;  /* Start met geen zichtbare overlay */
-  z-index: -1;
-}
-
-#olijfolie:hover::before, #proces:hover::before, #wij:hover::before, #fincas:hover::before {
-  opacity: 1;  /* Maak de overlay zichtbaar bij hover */
-  transition: opacity 0.4s ease; 
-}
-/*einde groene hover*/
 
 
 /*nav lijntjes*/
@@ -415,8 +335,8 @@ header nav li::after{
  /*margin: auto;*/
   transition: 0.2s;
   margin-top: 2px;
-  
 }
+
 nav ul li:hover::after{
   width: 100%;
 }
@@ -541,8 +461,6 @@ nav.zijmenu > ul > li{
 }  
     
   main#home{
-  display: grid;
-  gap: 1.3rem; 
   grid-template-areas: 
   'one one'
   'two three'
@@ -588,8 +506,6 @@ nav.zijmenu{
 
 
     main#home{
-  display: grid;
-  gap: 1.3rem; 
   grid-template-areas: 
   'one two'
   'one three'
@@ -616,16 +532,17 @@ div#intro > p{
     main article{
     column-count: 2;
     column-width: auto;
-    column-gap:30px;
+    column-gap: 30px;
     /* column-rule: 3px dotted var(--kleur); */
 }
 
-main article picture{
+main article figure{
     max-width:100%;
-}
+}  /*dit nog bekijken?? Was eerst main article picture, is fout?*/
+
+
 /*grid wij en de omgeving deel 2*/
 div#deel2{
-display: grid;
   gap: 1.8rem;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
@@ -635,8 +552,7 @@ display: grid;
 }
 /*Grid finca's*/
 main#finca{
-    display: grid;
-    gap: 18px; 
+    gap: 1.3rem; 
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
     'one two'
@@ -652,10 +568,9 @@ figure.tijdslijnliggend img{
 }
 /* Grid Productieproces */
 main#productieproces{
-    display: grid;
-    column-gap: 0.8rem;
-     grid-template-columns: 1fr 1fr;
-    grid-template-areas:
+  column-gap: 0.8rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
   'one one'
   'two three'
   'four five'
@@ -723,9 +638,7 @@ div#okt{
   grid-template-columns: auto;
 }
 
-  /* #extrafoto{
-    display: inline-block;
-  }  */
+  
 
 /* div.kolom{
     column-count: 2;
@@ -739,8 +652,6 @@ div#okt{
 @media (min-width: 1200px) {
 
     main#home{
-    display: grid;
-    gap: 1.3px;
     grid-template-areas:  
     'two one one'
     'four four three'
@@ -764,7 +675,7 @@ div#okt{
   main article{
     column-count: 3;
     column-width: auto;
-    column-gap:30px;
+    column-gap:30px;  /*rem gebruiken?*/
     /* column-rule: 3px dotted var(--kleur); nog bekijken als wel moet bij wij en omgeving in stuk zonder article nog stippellijn*/
 }
 }
