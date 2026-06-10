@@ -158,7 +158,7 @@ font-size: 1.2rem;
 
 #wij{
   grid-area: four;
-  background-image: url("img/wij.jpg");
+  background-image: url("img/w_ij.jpg");
   text-align: left;
   flex-direction:column;
  padding-bottom: 0.7rem;
