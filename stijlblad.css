@@ -61,7 +61,7 @@ body{
   max-width: 100em;
   margin: 0px auto;   /*0 verticaal top bottom, horizontaal links rechts auto = gecentreerd/gelijke margin binnen container */
   font-family: var(--lettertype);
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: var(--kleur);
   overflow-x: hidden; /* zodat zijmenu niet zichtbaar kan worden als niet actief , bijvoorbeeld als scherm GSM roteren staand-liggend - zowel htlm als body moeten getarged worden anders werkt het niet*/
 }
@@ -106,9 +106,8 @@ footer{
   background-color: var(--kleurstreep);
   padding: 0.5rem;
   margin-bottom: 1rem;
-  max-width: 100em;  /* footer width beperken? Nog bekijken met streep header zelfde doen?*/
- 
 }
+
 footer p{
   background-color: var(--kleurstreep);
   color: var(--achtergrondkleur);
@@ -136,10 +135,6 @@ main#home{
   'five'
   ;
 }
-
-/* div#intro > p{
-font-size: 1.2rem;
-} */
 
 #intro{
   grid-area: one;
@@ -336,7 +331,6 @@ header nav li::after{
   height: 2px;
   background: #FFC000;
   display: block;
- /*margin: auto;*/
   transition: 0.2s;
   margin-top: 2px;
 }
@@ -437,6 +431,8 @@ nav.zijmenu > ul > li{
 /* Small devices (565px and up) */
 @media (min-width: 565px) { 
 
+  body{font-size: 1.4rem;}
+
 /*liggend logo*/
   header img.kleinlogo{
     display: none;
@@ -458,10 +454,6 @@ main#home{
   'four four'
   'five five';
   }
-
-/* div#intro > p{
-font-size: 1.3rem;
-} */
 
 div#feb-maart,
 div#apr-juni,
@@ -503,33 +495,22 @@ main#home{
 /* Large devices (laptops/desktops, 992px and up) */
 @media (min-width: 992px) {
     
-    h1{font-size: 2.4rem;}
-    h2{font-size: 1.6rem;}  
-    
-  main>div>p{
-    font-size: 1.5rem;
+  h1{font-size: 2.4rem;}
+  h2{font-size: 1.6rem;}  
+  main>div>p, main>article>p{font-size: 1.5rem;}
+
+  main#home{
+  grid-template-rows: 1fr 1.5fr 1fr 1.4fr;
   }
 
-main#home{
-  grid-template-rows: 1fr 1.5fr 1fr 1.4fr;
-}
-
-
-    main article{
+  main article{
     column-count: 2;
     column-width: auto;
-    column-gap: 30px;
-    /* column-rule: 3px dotted var(--kleur); */
-}
-
-main article figure{
-    max-width:100%;
-}  /*dit nog bekijken?? Was eerst main article picture, is fout?*/
-
+    column-gap: 1.5rem;
+  }
 
 /*grid wij en de omgeving deel 2*/
 div#deel2{
-  gap: 1.8rem;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
   'one one'
@@ -538,7 +519,6 @@ div#deel2{
 }
 /*Grid finca's*/
 main#finca{
-    gap: 1.3rem; 
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
     'one two'
@@ -566,72 +546,30 @@ main#productieproces{
 }
 
 /*Grid tijdlijn*/
-div#feb-maart{
-   display: grid;
-    column-gap: 1rem;
-    grid-template-areas:
+
+div#feb-maart,
+div#apr-juni,
+div#juli-sept,
+div#okt{
+  grid-template-columns: 1fr;
+  grid-template-areas:
   'one'
   'two'
   'three'
   'four';
 }
-div#apr-juni{
-  display: grid;
-column-gap: 1rem;
-grid-template-areas:
-'one'
-'two'
-'three'
-'four';
-}
-div#juli-sept{
-display: grid;
-column-gap: 1rem;
-grid-template-areas:
-'one'
-'two'
-'three'
-'four';
-}
 
-div#okt{
-display: grid;
-column-gap: 1rem;
-grid-template-areas:
-'one'
-'two'
-'three'
-'four';
-}
-
-div#nov-dec{ display: grid;
-    column-gap: 1rem;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
+div#nov-dec{
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
   'one one'
   'two two'
   'three four'
   ;
   }
   div#persen{
-    margin-left: 1rem;
-  } /* want div#nov-dec neemt 2 kolommen in dus column-gap 1rem in de divs erboven nabootsen met marign left*/
-
-div#feb-maart,
-div#apr-juni,
-div#juli-sept,
-div#okt{
-  grid-template-columns: auto;
-}
-
-  
-
-/* div.kolom{
-    column-count: 2;
-    column-width: auto;
-    column-gap:30px;
-} */
-
+    margin-left: 0.8rem;
+  } /* want div#nov-dec neemt 2 kolommen in dus column-gap 0.8rem in de main#productieproces erboven nabootsen met marign left*/
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -642,17 +580,12 @@ div#okt{
     'two one one'
     'four four three'
     'five five five'
-    /*'five five five'*/
     ;
     grid-template-rows: 0.8fr 0.8fr 1.1fr;
     grid-template-columns: 1fr 1fr 1fr;
-
-    /*grid-template-columns: 1fr 2fr 2fr;
-    grid-template-rows: 1fr 1fr 2fr;*/
- 
   }
 
-    main, nav, div#logo{
+  main, nav, div#logo{
     max-width: 50em;
     margin: 0 auto;
     }  /*grote schermen tekst breedte beperken, body blijft maxwidth 100em, groene lijn blijft zo maar rest beperkt*/
@@ -660,28 +593,6 @@ div#okt{
 
   main article{
     column-count: 3;
-    column-width: auto;
-    column-gap:30px;  /*rem gebruiken?*/
-    /* column-rule: 3px dotted var(--kleur); nog bekijken als wel moet bij wij en omgeving in stuk zonder article nog stippellijn*/
 }
 }
 
-/* Very very large devices (large laptops and desktops, 1550px and up) */
-@media (min-width: 1550px) {
-   
-  /*main#home{
-    display: grid;
-    gap: 1.3rem; 
-    grid-template-areas: 
-    'one two three'
-    'four four three'
-    'five five five';
-    grid-template-rows: 1fr 0.6fr 1.2fr;
-    grid-template-columns: 1.8fr 0.8fr 1.2fr;
-}
- laatste opdeling RWD weglaten als max width in orde is*/
-
-/*#fincas{text-align: left;
-  flex-direction:column;
-padding-left: 5rem;}*/
-}
