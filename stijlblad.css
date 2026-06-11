@@ -104,12 +104,17 @@ iframe{
 
 footer{
   background-color: var(--kleurstreep);
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  max-width: 100em;  /* footer width beperken? Nog bekijken met streep header zelfde doen?*/
+ 
+}
+footer p{
+  background-color: var(--kleurstreep);
   color: var(--achtergrondkleur);
   font-size: 1rem;
-  border-bottom: solid 1.2rem var(--achtergrondkleur);
-  padding: 0.5rem 1.5rem;
-  max-width: 100em; /* footer width beperken anders gaat tekst helemaal mee naar links, nu nog net in beeld bij groot scherm + bij klein scherm niet tte veel naar links gepadding*/
-  margin: 10px auto; 
+  text-align: center;
+  margin-bottom: 0;
 }
 
 .onderlijn{
@@ -132,9 +137,9 @@ main#home{
   ;
 }
 
-div#intro > p{
+/* div#intro > p{
 font-size: 1.2rem;
-}
+} */
 
 #intro{
   grid-area: one;
@@ -192,7 +197,7 @@ a#olijfolie, a#proces, a#fincas, a#wij {
 /*Homepage elke gridbox zijn eigen hover doorzichtig groene overlay hieronder*/
 
 #olijfolie::before, #proces::before, #wij::before, #fincas::before {
-  content: '';  /* Maakt het pseudo-element zichtbaar */
+  content: '';  /* maakt het pseudo-element zichtbaar, maar verschijnt nog niet door opacity 0 */
   position: absolute;  /* Plaatst de overlay bovenop de achtergrond + zelfde positie als blok olijfolie  (hieronder; 0000) */
   top: 0;
   left: 0;
@@ -200,7 +205,6 @@ a#olijfolie, a#proces, a#fincas, a#wij {
   bottom: 0;
   background-color: rgba(0, 126, 0, 0.3);  
   opacity: 0;  /* Start met geen zichtbare overlay */
- 
 }
 
 #olijfolie:hover::before, #proces:hover::before, #wij:hover::before, #fincas:hover::before {
@@ -352,8 +356,6 @@ li.current::after{
   background: #FFC000(237, 125, 49);
   display: block;
   margin-top: 2px; 
- /* border-bottom: 2.5px solid #FFC000; */
-  /* bottom: -0.5px; */
 }
 /*einde nav lijntjes*/
 
@@ -406,6 +408,7 @@ li.current::after{
 ul.menu{
   display: none;
 }
+
 nav.zijmenu{
   width: 13rem;
   max-width: 450px;
@@ -420,25 +423,13 @@ nav.zijmenu{
   top: 1rem;
   z-index: 11;
   border: 5px solid rgb(157, 193, 131);
-
 }
 .zijmenu.active {
-   right: 4.5rem;
-
+  right: 4.5rem;
 }
 
-/* nav.zijmenu > ul{ */
-    /* border: 5px solid rgb(157, 193, 131); */
-  /* margin: 0.5rem; */
-  /* background-color: var(--achtergrondkleur); */
- /*Als Height van nav.zijmenu gedefineerd, deze terug activeren voor juiste opmaak }*/
-
 nav.zijmenu > ul > li{
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-  margin-left: 0.7rem;
-  margin-right: 0.7rem;
-  
+  margin: 1rem 0.7rem;
 }
 
 
@@ -446,30 +437,31 @@ nav.zijmenu > ul > li{
 /* Small devices (565px and up) */
 @media (min-width: 565px) { 
 
-  /*liggend logo*/
-    header img.kleinlogo{
-      display: none;
+/*liggend logo*/
+  header img.kleinlogo{
+    display: none;
     }
-    header img.grootlogo{
-      display: block;
-      width: 32rem;
+  header img.grootlogo{
+    display: block;
+    width: 32rem;
     height: 6rem;
     }
-    .zijmenu.active{
-      right: 2.5rem;
-      top: 8rem;
-}  
+  .zijmenu.active{
+    right: 2.5rem;
+    top: 8rem;
+    }  
     
-  main#home{
+main#home{
   grid-template-areas: 
   'one one'
   'two three'
   'four four'
   'five five';
-}
-div#intro > p{
+  }
+
+/* div#intro > p{
 font-size: 1.3rem;
-}
+} */
 
 div#feb-maart,
 div#apr-juni,
@@ -486,26 +478,19 @@ div#nov-dec {
 header{
   display: block;
 }
-  .hammenu{
-    display: none;
+.hammenu, nav.zijmenu{
+  display: none;
   }
-  ul.menu{
+
+ul.menu{
   display: flex;
   flex-direction: row;
   gap: 1rem;
   justify-content: space-between;
   padding: 1rem 1rem 0.5rem;
 }
-nav.zijmenu{
-  display: none;
-}
-/*ul.menu{
-  flex-direction: row;
-  justify-content: flex-start;
-    }*/
 
-
-    main#home{
+main#home{
   grid-template-areas: 
   'one two'
   'one three'
@@ -517,17 +502,18 @@ nav.zijmenu{
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media (min-width: 992px) {
-    /*body{font-size: 1.5rem;}*/
+    
     h1{font-size: 2.4rem;}
     h2{font-size: 1.6rem;}  
     
+  main>div>p{
+    font-size: 1.5rem;
+  }
 
 main#home{
   grid-template-rows: 1fr 1.5fr 1fr 1.4fr;
 }
-div#intro > p{
-  font-size: 1.5rem;
-}
+
 
     main article{
     column-count: 2;
