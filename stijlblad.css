@@ -24,13 +24,6 @@ header{
      position: relative; /* Om zijmenu absoluut te positioneren tov header ipv volledige pagina, anders beweegt zijmenu mee bij scrollen */
 }
 
-/*header img.kleinlogo, header img.grootlogo{
-  max-width: 100%;
-  height: auto;*/
-  /*margin-top: 1.2rem;
-  }*/
- 
-
 /* menu+logo*/
 nav ul{
   list-style: none;
