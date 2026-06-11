@@ -335,14 +335,9 @@ nav ul li:active::after{
   background: rgb(237, 125, 49);
 }
 
-/*navigatie toontt welke pagina actief is met class current*/
+/*class current is actieve pagina > streepje width blijft staan> 100%*/
 li.current::after{
-  content: '';
   width: 100%;
-  height: 2px;
-  background: #FFC000(237, 125, 49);
-  display: block;
-  margin-top: 2px; 
 }
 /*einde nav lijntjes*/
 
